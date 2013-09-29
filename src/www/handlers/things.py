@@ -41,6 +41,8 @@ class ThingReviewsHandler(BaseHandler):
         image_url = self.valid("image_url")
         text = self.valid("text")
 
+        if self.errors:
+            return self.send_error(400, chunk={'Status' : 'Error', 'Errors' : self.errors})
 
         
         print thing_id
