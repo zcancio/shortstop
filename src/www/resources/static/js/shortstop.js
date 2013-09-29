@@ -17,13 +17,14 @@ var markerImages = {
 
 }
 
+// http://s3.amazonaws.com/static.ashortstop.com/mapicons/drink-mark-1.png
 for (key in markerImages){
 
 	for (var i = 1; i < 11; i++){
 
 		markerImages[key].push(
 			{
-			  	url: '/static/img/' + key + '-mark-' +  i + '.png',
+			  	url: 'http://s3.amazonaws.com/static.ashortstop.com/mapicons/' + key + '-mark-' +  i + '.png',
 			  	size: new google.maps.Size(45, 56),
 			  	origin: new google.maps.Point(0, 0),
 			  	anchor: new google.maps.Point(45, 20),
