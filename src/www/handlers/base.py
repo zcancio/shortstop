@@ -22,6 +22,10 @@ class BaseHandler(tornado.web.RequestHandler, utils.validationmixin.ValidationMi
     def redis(self):
         return self.application.redis
 
+    @property
+    def global_message_buffer(self):
+        return self.application.global_message_buffer
+
     def check_xsrf_cookie(self):
         pass
 

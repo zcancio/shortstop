@@ -1,6 +1,7 @@
 from handlers.home import HomeHandler
 from handlers.venues import VenuesSearchHandler, VenueThingsHandler, VenuesSearchByThingsHandler
-from handlers.things import ThingVotesHandler, ThingReviewsHandler
+from handlers.things import ThingVotesHandler, ThingReviewsHandler, ThingHandler
+from handlers.messages import MessageUpdatesHandler, MessageNewHandler
 
 
 handlers = [
@@ -14,6 +15,11 @@ handlers = [
 
       (r"/things/([0-9]+)/votes", ThingVotesHandler),
       (r"/things/([0-9]+)/reviews", ThingReviewsHandler),
+
+      (r"/a/messages/updates", MessageUpdatesHandler),
+      (r"/a/messages/new", MessageNewHandler),
+
+      (r"/things/([0-9]+)", ThingHandler)
 
 ]
 

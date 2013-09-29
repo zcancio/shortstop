@@ -52,6 +52,8 @@ var categoryOverlayClasses = {
 
 function initApp() {
 
+	updater.poll();
+
 	initMap();
 
 	navigator.geolocation.getCurrentPosition(function(position) {
@@ -74,6 +76,9 @@ function initApp() {
 		current_category = "fun";
 		refreshMap(center.lat(),center.lng());
 	});
+
+
+
 
 
 	
@@ -357,30 +362,106 @@ function renderDoItOverlay(marker, marker_number, venue, thing){
 
 
 }
-	//http://www.evoluted.net/thinktank/web-development/google-maps-api-v3-custom-location-pins
 
 
 
-	// Add listener for a click on the pin
+var updater = {
+    errorSleepTime: 500,
+    cursor: null,
+
+    poll: function() {
+    	console.log('polling');
+        // var args = {"_xsrf": getCookie("_xsrf")};
+        var args = {};
+
+        if (updater.cursor) {
+        	args.cursor = updater.cursor;
+        }
+
+        $.ajax({
+        	url: "/a/messages/updates", 
+        	type: "POST", 
+        	dataType: "json",
+            data: $.param(args), 
+            success: updater.onSuccess,
+            error: updater.onError
+        });
+    },
+
+    onSuccess: function(response) {
+    	console.log(response);
+
+        try {
+            updater.newMessages(response);
+
+            return;
+        } catch (e) {
+            updater.onError();
+            return;
+        }
+        updater.errorSleepTime = 500;
+        window.setTimeout(updater.poll, 0);
+    },
+
+    onError: function(response) {
+        updater.errorSleepTime *= 2;
+        console.log("Poll error; sleeping for", updater.errorSleepTime, "ms");
+        window.setTimeout(updater.poll, updater.errorSleepTime);
+    },
+
+    newMessages: function(response) {
+
+    	console.log(response);
 
 
-	// Add information window
-	// var infowindow1 = new google.maps.InfoWindow({
-	// 	content:  createInfo('Evoluted New Media', 'Ground Floor,
-	// 	35 Lambert Street,
-	// 	Sheffield,
-	// 	South Yorkshire,
-	// 	S3 7BH
-	// 	<a title="Click to view our website" href="http://www.evoluted.net">Our Website</a>')
-	// });
+        if (!response.messages) {
+        	return;
+        }
 
-	// // Create information window
-	// function createInfo(title, content) {
-	// 			return '
-	// 	<div class="infowindow"><strong>'+ title +'</strong>
-	// 	'+content+'</div>
-	// 	';
-	// }
+        updater.cursor = response.cursor;
+        var messages = response.messages;
+        updater.cursor = messages[messages.length - 1].id;
+        console.log(messages.length, "new messages, cursor:", updater.cursor);
+        
+        var last_message = messages[messages.length-1];
+        thing_id = last_message.thing_id;
+
+        console.log(last_message)
+
+		$.ajax({
+	        url: "/things/" + thing_id,
+	        dataType: 'json',
+	        type: 'GET',
+	        success: function(results, textStatus, jqXHR) {
+	        	console.log(results);
+
+	        	var thing = results['thing'];
+	        	var venue = thing['venue'];
+	        	var do_vote = confirm("Vote for " + thing.name + " @" + venue.name);
 
 
+	        	if (do_vote === true){
+	        		console.log('vote');
+	        	}
+
+	        },
+	        error: function(XMLHttpRequest, textStatus, errorThrown){
+	        	console.log(errorThrown);
+	        }
+		});
+
+        // for (var i = 0; i < messages.length; i++) {
+        //     updater.showMessage(messages[i]);
+        // }
+    },
+
+    showMessage: function(message) {
+        var existing = $("#m" + message.id);
+        if (existing.length > 0) return;
+        var node = $(message.html);
+        node.hide();
+        $("#inbox").append(node);
+        node.slideDown();
+    }
+};
 

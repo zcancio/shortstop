@@ -75,6 +75,19 @@ class ThingReviewsHandler(BaseHandler):
 
 
 
+class ThingHandler(BaseHandler):
+
+
+    def get(self, thing_id):
+        
+        thing = self.mysqldb.get("SELECT * FROM thing WHERE id=%s", thing_id)
+        venue = self.mysqldb.get("SELECT * FROM venue WHERE id=%s", thing.venue_id)
+
+        thing['venue'] = venue
+
+
+        self.write({"Status" : "OK", "thing" : thing})
+
 
 
 
