@@ -5,37 +5,25 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 
 		<title>ShortStop</title>
-		<!-- <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css"> -->
-		<link rel="stylesheet" href="{{static_url('css/app.css')}}">
-
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    	<script src="https://maps.google.com/maps/api/js?sensor=false"></script>
-    	<script src="{{static_url('js/shortstop.js')}}"></script>
-
+		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
+		<link rel="stylesheet" href="css/app.css">
 	</head>
 	<body>
-
-			
 		<div class="pure-menu">
-			<a href="#" class="pure-menu-heading"><img src="{{static_url('img/logo.png')}}" /></a>
+			<a href="#" class="pure-menu-heading"><img src="img/logo.png" /></a>
 		</div>
 
-		<div id="map-container">
-	<!-- 		<div class="zoom-ui">
-					<div class="zoom-in">
-						<p>+</p>
-					</div>
-					<div class="zoom-out">
-						<p>–</p>
-					</div>a
-				</div> -->
-			<div id="map"></div>
+		<div class="zoom-ui">
+			<div class="zoom-in">
+				<p>+</p>
+			</div>
+			<div class="zoom-out">
+				<p>–</p>
+			</div>
 		</div>
+		<a href="#overlay" class="open-overlay"><div class="food mark"><span>1</span></div></a>
 
-	
-		<!-- <a href="#overlay" class="open-overlay"><div class="food mark"><span>1</span></div></a> -->
-
-<!-- 		<div id="overlay">
+		<div id="overlay">
 		    <a href="#" class="close">&times;</a>
     	    <div class="location">
     	    	<h2>My Location</h2>
@@ -50,8 +38,8 @@
     	    	<h2>Item</h2>
     	    </div>
 		</div>
-		<div id="mask" onclick="document.location='#';"></div> 
- -->
+		<div id="mask" onclick="document.location='#';"></div> <!-- the only javascript -->
+
 		<div id="button-bar">
 			<div class="buttons">
 				<a href="#"><div class="pure-button hungry">I'm Hungry</div></a>
@@ -60,14 +48,6 @@
 			</div>
 		</div>
 	</body>
-
-	<script type="text/javascript">
-
-		$(document).ready(function(e){
-			initApp();
-		});
-
-	</script>
 </html>
 
 

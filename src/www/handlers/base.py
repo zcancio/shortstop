@@ -1,8 +1,9 @@
 import tornado.web
 import tornado.escape
 
+import utils.validationmixin
 
-class BaseHandler(tornado.web.RequestHandler):
+class BaseHandler(tornado.web.RequestHandler, utils.validationmixin.ValidationMixin):
     @property
     def mysqldb(self):
         return self.application.db

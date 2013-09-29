@@ -20,5 +20,8 @@ class HomeHandler(BaseHandler):
 	    #     enrolled_theaters = getEnrolledTheaters(self.application, ip_location.latitude, ip_location.longitude)
 	    #     all_theaters = models.theatermodel.get_nearby_theaters(self.application, ip_location.latitude, ip_location.longitude, limit=4, user_id=current_user_id, referral_url_hostname=self.request.host)
 
+	    
         self.render("app.html")
+
+
 
