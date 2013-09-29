@@ -37,6 +37,7 @@ dependencies: \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/ASI/ASIProgressDelegate.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/ASI/ASICacheDelegate.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/ASI/ASINetworkQueue.h \
+  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/Ti2DMatrix.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiViewProxy.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiViewTemplate.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiApp.h \

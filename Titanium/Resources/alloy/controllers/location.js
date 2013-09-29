@@ -75,7 +75,7 @@ function Controller() {
         layout: "horizontal"
     });
     $.__views.locationWindow.add($.__views.actionsView);
-    $.__views.__alloyId6 = Ti.UI.createButton({
+    $.__views.__alloyId28 = Ti.UI.createButton({
         width: "150dp",
         height: "50dp",
         font: {
@@ -83,11 +83,11 @@ function Controller() {
         },
         left: "10dp",
         title: "Did It!",
-        id: "__alloyId6"
+        id: "__alloyId28"
     });
-    $.__views.actionsView.add($.__views.__alloyId6);
-    onDidItClicked ? $.__views.__alloyId6.addEventListener("click", onDidItClicked) : __defers["$.__views.__alloyId6!click!onDidItClicked"] = true;
-    $.__views.__alloyId7 = Ti.UI.createButton({
+    $.__views.actionsView.add($.__views.__alloyId28);
+    onDidItClicked ? $.__views.__alloyId28.addEventListener("click", onDidItClicked) : __defers["$.__views.__alloyId28!click!onDidItClicked"] = true;
+    $.__views.__alloyId29 = Ti.UI.createButton({
         width: "150dp",
         height: "50dp",
         font: {
@@ -95,16 +95,16 @@ function Controller() {
         },
         right: "10dp",
         title: "Later",
-        id: "__alloyId7"
+        id: "__alloyId29"
     });
-    $.__views.actionsView.add($.__views.__alloyId7);
-    onLaterClicked ? $.__views.__alloyId7.addEventListener("click", onLaterClicked) : __defers["$.__views.__alloyId7!click!onLaterClicked"] = true;
+    $.__views.actionsView.add($.__views.__alloyId29);
+    onLaterClicked ? $.__views.__alloyId29.addEventListener("click", onLaterClicked) : __defers["$.__views.__alloyId29!click!onLaterClicked"] = true;
     exports.destroy = function() {};
     _.extend($, $.__views);
     args = arguments[0] || {};
     console.log(Ti.API.info(args));
-    __defers["$.__views.__alloyId6!click!onDidItClicked"] && $.__views.__alloyId6.addEventListener("click", onDidItClicked);
-    __defers["$.__views.__alloyId7!click!onLaterClicked"] && $.__views.__alloyId7.addEventListener("click", onLaterClicked);
+    __defers["$.__views.__alloyId28!click!onDidItClicked"] && $.__views.__alloyId28.addEventListener("click", onDidItClicked);
+    __defers["$.__views.__alloyId29!click!onLaterClicked"] && $.__views.__alloyId29.addEventListener("click", onLaterClicked);
     _.extend($, exports);
 }
 

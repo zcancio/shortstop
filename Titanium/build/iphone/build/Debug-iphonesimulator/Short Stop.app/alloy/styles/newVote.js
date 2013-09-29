@@ -1,0 +1,1 @@
+/Users/trung/dev/ShortStop/Titanium/Resources/alloy/styles/newVote.js

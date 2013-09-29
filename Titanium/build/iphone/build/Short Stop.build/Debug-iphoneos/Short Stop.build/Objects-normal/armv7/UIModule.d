@@ -25,14 +25,9 @@ dependencies: \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiBuffer.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiBlob.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiUIAlertDialogProxy.h \
+  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/Ti2DMatrix.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiUIiPhoneProxy.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiApp.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiHost.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/Bridge.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiStylesheet.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/KrollBridge.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiRootViewController.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiControllerProtocols.h \
+  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiUIiOSToolbarProxy.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiViewProxy.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiUIView.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiAnimation.h \
@@ -42,6 +37,14 @@ dependencies: \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiGradient.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiRect.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiViewTemplate.h \
+  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiToolbar.h \
+  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiApp.h \
+  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiHost.h \
+  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/Bridge.h \
+  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiStylesheet.h \
+  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/KrollBridge.h \
+  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiRootViewController.h \
+  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiControllerProtocols.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/ImageLoader.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/ASI/ASIHTTPRequest.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/ASI/ASIHTTPRequestConfig.h \

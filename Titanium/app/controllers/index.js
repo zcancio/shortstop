@@ -19,17 +19,12 @@ Alloy.CFG.nav=$.nav;
 
 $.index.open();
 
-function feelingBoredClicked(event) {
+function voteClicked(event) {
 	var xpng=require('xpng');
-	xpng.openWin(Alloy.CFG.nav,'map',{});				
+	xpng.openWin(Alloy.CFG.nav,'newVote',{});
 }
 
-function feelingHungryClicked(event) {
+function searchClicked(event) {
 	var xpng=require('xpng');
-	xpng.openWin(Alloy.CFG.nav,'location',{});		
-}
-
-function viewToDoLaterClicked(event) {
-	var xpng=require('xpng');
-	xpng.openWin(Alloy.CFG.nav,'doItLater',{});
+	xpng.openWin(Alloy.CFG.nav,'map',{});
 }

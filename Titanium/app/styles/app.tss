@@ -14,3 +14,16 @@
 		fontSize: "16dp"	
 	}
 }  
+
+".GeneralWindow": {
+	backgroundImage: "bg.png"
+}
+
+".GeneralElement": {
+	backgroundColor: "#f8f8f8"
+}
+
+".DividerElement": {
+	backgroundImage: "divider.png",
+	height: "2dp"
+}

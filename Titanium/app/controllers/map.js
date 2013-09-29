@@ -7,11 +7,11 @@ console.log(Ti.API.info(args));
 function mapClicked(evt){
     Ti.API.info("Annotation " + evt.title + " clicked, id: " + evt.annotation.myid + "evt " + evt.clicksource);
     // Ti.API.info(Alloy.CFG.nav);
-    if (evt.clicksource == "rightButton") {
-    	Ti.API.info("Annotation " + evt.title + ", right button clicked.");
-    	var xpng=require('xpng');
-		xpng.openWin(Alloy.CFG.nav,'location',{myprop: "value"});
-    }
+    // if (evt.clicksource == "rightButton") {
+    	// Ti.API.info("Annotation " + evt.title + ", right button clicked.");
+    	// var xpng=require('xpng');
+		// xpng.openWin(Alloy.CFG.nav,'location',{myprop: "value"});
+    // }
     // Check for all of the possible names that clicksouce
     // can report for the left button/view.
     if (evt.clicksource == 'leftButton' || evt.clicksource == 'leftPane' ||
@@ -57,30 +57,17 @@ function mapRegionChanged(e) {
 	$.mapview.addAnnotation(yahoo);
 }
 
-function getMockAnnotations() {
-	var yahoo = Titanium.Map.createAnnotation({
-			    latitude:current_latitude - 0.003,
-			    longitude:current_longitude - 0.002,
-				title:"Yahoo",
-			    subtitle:'Sunnyvale, CA',
-			    pincolor:Titanium.Map.ANNOTATION_GREEN,
+function createAnnotationFromLocation(location) {
+	return Titanium.Map.createAnnotation({
+			    latitude:location.lat,
+			    longitude:location.lng,
+			    title:location.name,
+			    pincolor:Titanium.Map.ANNOTATION_RED,
 			    animate:true,
 			    leftButton: '../images/appcelerator_small.png',
 			    rightButton: Titanium.UI.iPhone.SystemButton.DISCLOSURE,
-			    myid:1 // Custom property to uniquely identify this annotation.
+			    myid:location.id // Custom property to uniquely identify this annotation.
 			});	
-	var google = Titanium.Map.createAnnotation({
-			    latitude:current_latitude + 0.005,
-			    longitude:current_longitude + 0.004,
-			    title:"Yahoo",
-			    subtitle:'Sunnyvale, CA',
-			    pincolor:Titanium.Map.ANNOTATION_GREEN,
-			    animate:true,
-			    leftButton: '../images/appcelerator_small.png',
-			    rightButton: Titanium.UI.iPhone.SystemButton.DISCLOSURE,
-			    myid:2 // Custom property to uniquely identify this annotation.
-			});	
-	return [yahoo, google];
 }
 
 var my_location = Titanium.Geolocation.getCurrentPosition(function(e) {
@@ -92,11 +79,29 @@ var my_location = Titanium.Geolocation.getCurrentPosition(function(e) {
 			current_latitude = e.coords.latitude;
 			$.mapview.region = {
 				latitude:current_latitude, longitude:current_longitude,
-            	latitudeDelta:0.01, longitudeDelta:0.01
+            	latitudeDelta:0.004, longitudeDelta:0.004
 			};
-
-			var annotations = getMockAnnotations();
-			$.mapview.addAnnotations(annotations);
+			
+			var url = "http://www.ashortstop.com/venues/search?lat="+ current_latitude + "&" + current_longitude;
+			 var client = Ti.Network.createHTTPClient({
+			     onload : function(e) {
+			         var locations = eval('('+this.responseText+')').venues;
+			         var annotations = [];
+			         for (var i = 0; i < locations.length; i++) {
+			         	var location = locations[i];
+			         	var ann = createAnnotationFromLocation(location);
+			         	annotations[i] = ann;
+			         }
+			         $.mapview.annotations = annotations;
+			     },
+			     // function called when an error occurs, including a timeout
+			     onerror : function(e) {
+			         Ti.API.debug(e.error);
+			     },
+			     timeout : 5000  // in milliseconds
+			 });
+			 client.open("GET", url);
+			 client.send();
 
 	   });
 

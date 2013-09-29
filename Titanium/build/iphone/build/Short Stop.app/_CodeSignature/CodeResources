@@ -6,13 +6,29 @@
 	<dict>
 		<key>Default-568h@2x.png</key>
 		<data>
+		OxxzKuAz8+FFfyG6gFEr4JTjzDw=
+		</data>
+		<key>Default-568h@2x2222.png</key>
+		<data>
 		P+91JP6ERBvhLIx1BYdBgHv19y4=
 		</data>
+		<key>Default-Portrait223432.png</key>
+		<data>
+		WSwjnk1spUzf+lFnNyT7s2ep8WQ=
+		</data>
 		<key>Default.png</key>
+		<data>
+		OxxzKuAz8+FFfyG6gFEr4JTjzDw=
+		</data>
+		<key>Default12313.png</key>
 		<data>
 		64gHCblBFrIZj9x55+dCKFhwlmM=
 		</data>
 		<key>Default@2x.png</key>
+		<data>
+		OxxzKuAz8+FFfyG6gFEr4JTjzDw=
+		</data>
+		<key>Default@2x1231.png</key>
 		<data>
 		498GBaK88aCE9D+gd+0EsHCb2rc=
 		</data>
@@ -22,11 +38,31 @@
 		</data>
 		<key>appicon.png</key>
 		<data>
+		88lT/GrWV3POVoLFD5NX/oVmWmM=
+		</data>
+		<key>appicon_1.png</key>
+		<data>
 		j5rKZCKOmm21mOHfYNdQyIb9PbQ=
+		</data>
+		<key>bg.png</key>
+		<data>
+		HJut73+G5qkMLzoGW4r6c6tzK98=
+		</data>
+		<key>divider.png</key>
+		<data>
+		fLW8n0p0dry3VOceW4kw3zYXuYQ=
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
-		EobPAgD23SPxS5CYStZkXF79ZN8=
+		L1mNRm/aeTt1luNULpzxwKsBdxo=
+		</data>
+		<key>image-icon.png</key>
+		<data>
+		EM2VWcz10dz271VbHRvAHuunpPI=
+		</data>
+		<key>loading-screen.png</key>
+		<data>
+		OxxzKuAz8+FFfyG6gFEr4JTjzDw=
 		</data>
 		<key>modules/ui/images/badge.png</key>
 		<data>
@@ -39,6 +75,14 @@
 		<key>modules/ui/images/photoDefault.png</key>
 		<data>
 		yQdhJSSWjA5+vRfebmjyD0MK8+8=
+		</data>
+		<key>pencil-icon.png</key>
+		<data>
+		6sk7e2eE4kd7SryLqkRAoTFWunA=
+		</data>
+		<key>photo-icon.png</key>
+		<data>
+		ssLDM9jM8SMuHSftB/TIyTXwUPs=
 		</data>
 		<key>stylesheet.plist</key>
 		<data>

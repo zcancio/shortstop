@@ -7,25 +7,30 @@ Logfile initialized
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
 [DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.015833 seconds on emulator to get ready
+[DEBUG] waited 0.017705 seconds on emulator to get ready
 [DEBUG] com.ashortstop installed? False
 [INFO] Copying CommonJS modules...
 [INFO] Copying project resources..
+[TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/actionbarhelper.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/actionbarhelper.js
 [TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/backbone.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/backbone.js
 [TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/constants.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/constants.js
 [TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/controllers/BaseController.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/controllers/BaseController.js
 [TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/controllers/didIt.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/controllers/didIt.js
+[TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/controllers/doItLater.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/controllers/doItLater.js
+[TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/controllers/doItLaterItem.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/controllers/doItLaterItem.js
 [TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/controllers/index.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/controllers/index.js
 [TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/controllers/location.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/controllers/location.js
 [TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/controllers/map.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/controllers/map.js
-[TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/controllers/win1content.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/controllers/win1content.js
-[TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/controllers/win2.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/controllers/win2.js
+[TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/controllers/newVote.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/controllers/newVote.js
+[TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/controllers/review.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/controllers/review.js
 [TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/styles/didIt.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/styles/didIt.js
+[TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/styles/doItLater.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/styles/doItLater.js
+[TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/styles/doItLaterItem.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/styles/doItLaterItem.js
 [TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/styles/index.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/styles/index.js
 [TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/styles/location.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/styles/location.js
 [TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/styles/map.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/styles/map.js
-[TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/styles/win1content.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/styles/win1content.js
-[TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/styles/win2.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/styles/win2.js
+[TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/styles/newVote.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/styles/newVote.js
+[TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/styles/review.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/styles/review.js
 [TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/sync/localStorage.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/sync/localStorage.js
 [TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/sync/properties.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/sync/properties.js
 [TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/sync/sql.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/sync/sql.js
@@ -33,8 +38,11 @@ Logfile initialized
 [TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/underscore.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/underscore.js
 [TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/widget.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/widget.js
 [TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy.js
-[TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/android/alloy/CFG.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/CFG.js
+[TRACE] COPYING CREATED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/android/alloy/CFG.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/CFG.js
 [TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/app.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/app.js
+[TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/date.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/date.js
+[TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/sha-aws.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/sha-aws.js
+[TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/utf8.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/utf8.js
 [TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/xpng.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/xpng.js
 [DEBUG] LiveView not enabled
 [TRACE] Generating Java Classes
@@ -73,17 +81,21 @@ Logfile initialized
 [DEBUG] creating unsigned apk: /Users/trung/dev/ShortStop/Titanium/build/android/bin/app-unsigned.apk
 [DEBUG] from resource zip => assets/Resources/alloy/controllers/BaseController.js
 [DEBUG] from resource zip => assets/Resources/alloy/controllers/didIt.js
+[DEBUG] from resource zip => assets/Resources/alloy/controllers/doItLater.js
+[DEBUG] from resource zip => assets/Resources/alloy/controllers/doItLaterItem.js
 [DEBUG] from resource zip => assets/Resources/alloy/controllers/index.js
 [DEBUG] from resource zip => assets/Resources/alloy/controllers/location.js
 [DEBUG] from resource zip => assets/Resources/alloy/controllers/map.js
-[DEBUG] from resource zip => assets/Resources/alloy/controllers/win1content.js
-[DEBUG] from resource zip => assets/Resources/alloy/controllers/win2.js
+[DEBUG] from resource zip => assets/Resources/alloy/controllers/newVote.js
+[DEBUG] from resource zip => assets/Resources/alloy/controllers/review.js
 [DEBUG] from resource zip => assets/Resources/alloy/styles/didIt.js
+[DEBUG] from resource zip => assets/Resources/alloy/styles/doItLater.js
+[DEBUG] from resource zip => assets/Resources/alloy/styles/doItLaterItem.js
 [DEBUG] from resource zip => assets/Resources/alloy/styles/index.js
 [DEBUG] from resource zip => assets/Resources/alloy/styles/location.js
 [DEBUG] from resource zip => assets/Resources/alloy/styles/map.js
-[DEBUG] from resource zip => assets/Resources/alloy/styles/win1content.js
-[DEBUG] from resource zip => assets/Resources/alloy/styles/win2.js
+[DEBUG] from resource zip => assets/Resources/alloy/styles/newVote.js
+[DEBUG] from resource zip => assets/Resources/alloy/styles/review.js
 [DEBUG] from resource zip => assets/Resources/alloy/sync/localStorage.js
 [DEBUG] from resource zip => assets/Resources/alloy/sync/properties.js
 [DEBUG] from resource zip => assets/Resources/alloy/sync/sql.js
@@ -96,10 +108,21 @@ Logfile initialized
 [DEBUG] from resource zip => assets/Resources/images/1_navigation_refresh.png
 [DEBUG] from resource zip => assets/Resources/1_navigation_refresh.png
 [DEBUG] from resource zip => assets/Resources/2_action_settings.png
+[DEBUG] from resource zip => assets/Resources/actionbarhelper.js
 [DEBUG] from resource zip => assets/Resources/alloy.js
 [DEBUG] from resource zip => assets/Resources/app.js
 [DEBUG] from resource zip => assets/Resources/appicon.png
+[DEBUG] from resource zip => assets/Resources/appicon_1.png
+[DEBUG] from resource zip => assets/Resources/bg.png
+[DEBUG] from resource zip => assets/Resources/date.js
 [DEBUG] from resource zip => assets/Resources/default.png
+[DEBUG] from resource zip => assets/Resources/divider.png
+[DEBUG] from resource zip => assets/Resources/image-icon.png
+[DEBUG] from resource zip => assets/Resources/loading-screen.png
+[DEBUG] from resource zip => assets/Resources/pencil-icon.png
+[DEBUG] from resource zip => assets/Resources/photo-icon.png
+[DEBUG] from resource zip => assets/Resources/sha-aws.js
+[DEBUG] from resource zip => assets/Resources/utf8.js
 [DEBUG] from resource zip => assets/Resources/xpng.js
 [DEBUG] from resource zip => assets/app.json
 [DEBUG] from resource zip => assets/index.json
@@ -123,6 +146,9 @@ Logfile initialized
 [DEBUG] from resource zip => res/drawable-notlong-port-hdpi/background.png
 [DEBUG] from resource zip => res/drawable-notlong-port-ldpi/background.png
 [DEBUG] from resource zip => res/drawable-notlong-port-mdpi/background.png
+[DEBUG] from JAR /Users/trung/Library/Application Support/Titanium/mobilesdk/osx/3.1.3.GA/android/thirdparty.jar => org/apache/Commons-NOTICE.txt
+[DEBUG] from JAR /Users/trung/Library/Application Support/Titanium/mobilesdk/osx/3.1.3.GA/android/thirdparty.jar => org/apache/HttpComponents-NOTICE.txt
+[DEBUG] from JAR /Users/trung/Library/Application Support/Titanium/mobilesdk/osx/3.1.3.GA/android/thirdparty.jar => org/apache/mime4j-NOTICE.txt
 [DEBUG] from JAR /Users/trung/Library/Application Support/Titanium/mobilesdk/osx/3.1.3.GA/android/modules/titanium-ui.jar => ti/modules/titanium/ui/widget/webview/binding.js
 [DEBUG] from JAR /Users/trung/Library/Application Support/Titanium/mobilesdk/osx/3.1.3.GA/android/modules/titanium-ui.jar => ti/modules/titanium/ui/widget/webview/binding.min.js
 [DEBUG] from JAR /Users/trung/Library/Application Support/Titanium/mobilesdk/osx/3.1.3.GA/android/modules/titanium-ui.jar => ti/modules/titanium/ui/widget/webview/json2.js
@@ -147,6 +173,6 @@ Logfile initialized
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
 [DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.015825 seconds on emulator to get ready
+[DEBUG] waited 0.015293 seconds on emulator to get ready
 [INFO] Installing application on device
 [INFO] Application installed. Launch from drawer on Home Screen

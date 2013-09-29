@@ -1,25 +1,53 @@
 <Alloy>
 
     <!-- Anddroid Window -->
-	<Window id="index" platform="android">
-		<Button id="feelingBoredButton" onClick="feelingBoredClicked" title="Feeling bored"
+	<Window class="GeneralElement" id="index" platform="android">
+		<!-- <Button id="feelingBoredButton" onClick="feelingBoredClicked" title="Feeling bored"
             		top="10" width="200dp" height="50dp" />
         <Button id="feelingHungryButton" onClick="feelingHungryClicked" title="Feeling hungry"
             		top="10" width="200dp" height="50dp" />
         <Button id="viewToDoLaterButton" onClick="viewToDoLaterClicked" title="Your List"
-            		top="10" width="200dp" height="50dp" />   
+            		top="10" width="200dp" height="50dp" /> -->
+         <View class="GeneralElement" height="60dp">
+                	<Label>Vote for you favorite</Label>
+                </View>
+                <View class="DividerElement"></View>
+                <View class="GeneralElement" height="60dp">   
+		         	<Button class="GeneralElement" onClick="voteClicked" title="Vote"
+		            		width="200dp" height="50dp" />
+		        </View>
+		        <View class="DividerElement"></View>
+		        <View class="GeneralElement" height="60dp">
+		         	<Label class="GeneralElement">Search</Label>
+		        </View>
+		        <View class="DividerElement"></View>
+		        <View class="GeneralElement" height="60dp">
+		         	<Button class="GeneralElement" onClick="searchClicked" title="Search"
+		         	width="200dp" height="50dp"></Button>
+		         </View>
 	</Window>
 	
     <!-- iOS Window -->
-	<Window id="index" platform="ios">
+	<Window id="index" class="GeneralElement" platform="ios">
         <NavigationGroup id="nav">
             <Window id="win1" title="ShortStop">
-                <Button id="feelingBoredButton" onClick="feelingBoredClicked" title="Feeling bored"
-            		top="10" width="150" height="50" />
-            	<Button id="feelingHungryButton" onClick="feelingHungryClicked" title="Feeling hungry"
-            		top="10" width="150" height="50" />
-            	<Button id="viewToDoLaterButton" onClick="viewToDoLaterClicked" title="Your List"
-            		top="10" width="200dp" height="50dp" /> 	
+            	<View class="GeneralElement" height="60dp">
+                	<Label>Vote for you favorite</Label>
+                </View>
+                <View class="DividerElement"></View>
+                <View class="GeneralElement" height="60dp">   
+		         	<Button class="GeneralElement" onClick="voteClicked" title="Vote"
+		            		width="200dp" height="50dp" />
+		        </View>
+		        <View class="DividerElement"></View>
+		        <View class="GeneralElement" height="60dp">
+		         	<Label class="GeneralElement">Search</Label>
+		        </View>
+		        <View class="DividerElement"></View>
+		        <View class="GeneralElement" height="60dp">
+		         	<Button class="GeneralElement" onClick="searchClicked" title="Search"
+		         	width="200dp" height="50dp"></Button>
+		         </View>
             </Window>
         </NavigationGroup>
     </Window>

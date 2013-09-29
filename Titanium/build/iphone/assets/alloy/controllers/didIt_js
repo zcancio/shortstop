@@ -14,7 +14,7 @@ function Controller() {
         var AWSBucketName = "static.ashortstop.com";
         var AWSHost = "s3.amazonaws.com";
         var currentDateTime = formatDate(new Date(), "E, d MMM yyyy HH:mm:ss") + " -0700";
-        var name = "testing2.png";
+        var name = "testing.png";
         var xhr = Ti.Network.createHTTPClient();
         xhr.onerror = function(e) {
             var errorDetails = e.error + "\n";
@@ -26,12 +26,13 @@ function Controller() {
         };
         xhr.setTimeout(99e3);
         xhr.open("PUT", "http://" + AWSHost + "/" + AWSBucketName + "/" + name, false);
-        var StringToSign = "PUT\n\n\nimage/png\n" + currentDateTime + "\nx-amz-acl:public-read\n/" + AWSBucketName + "/" + name;
+        var StringToSign = "PUT\n\nimage/png\n" + currentDateTime + "\nx-amz-acl:public-read\n/" + AWSBucketName + "/" + name;
         var AWSSignature = b64_hmac_sha1(AWSSecretAccessKey, Utf8.encode(StringToSign));
         var AuthorizationHeader = "AWS " + AWSAccessKeyID + ":" + AWSSignature;
         xhr.setRequestHeader("Authorization", AuthorizationHeader);
         xhr.setRequestHeader("X-Amz-Acl", "public-read");
         xhr.setRequestHeader("Host", AWSHost);
+        xhr.setRequestHeader("Content-Type", "image/png");
         xhr.setRequestHeader("Date", currentDateTime);
         xhr.send(selectedImage);
     }

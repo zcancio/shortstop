@@ -1,1 +1,0 @@
-/Users/trung/dev/ShortStop/Titanium/Resources/alloy/styles/win1content.js

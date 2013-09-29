@@ -1,9 +1,0 @@
-"#index[platform=android]":{
-	 backgroundColor:"white",
-	 exitOnClose:"true",
-	 navBarHidden:"false"
-}
-
-"#index[platform=ios]":{
- 	backgroundColor:"white"
-}

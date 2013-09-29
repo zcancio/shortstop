@@ -1,15 +1,11 @@
 function Controller() {
-    function feelingBoredClicked() {
+    function voteClicked() {
+        var xpng = require("xpng");
+        xpng.openWin(Alloy.CFG.nav, "newVote", {});
+    }
+    function searchClicked() {
         var xpng = require("xpng");
         xpng.openWin(Alloy.CFG.nav, "map", {});
-    }
-    function feelingHungryClicked() {
-        var xpng = require("xpng");
-        xpng.openWin(Alloy.CFG.nav, "location", {});
-    }
-    function viewToDoLaterClicked() {
-        var xpng = require("xpng");
-        xpng.openWin(Alloy.CFG.nav, "doItLater", {});
     }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "index";
@@ -20,8 +16,8 @@ function Controller() {
     var exports = {};
     var __defers = {};
     $.__views.index = Ti.UI.createWindow({
-        layout: "vertical",
         backgroundColor: "white",
+        layout: "vertical",
         id: "index"
     });
     $.__views.index && $.addTopLevelView($.__views.index);
@@ -30,42 +26,95 @@ function Controller() {
         id: "win1",
         title: "ShortStop"
     });
-    $.__views.feelingBoredButton = Ti.UI.createButton({
-        width: "150",
-        height: "50",
-        font: {
-            fontSize: "16dp"
-        },
-        id: "feelingBoredButton",
-        title: "Feeling bored",
-        top: "10"
+    $.__views.__alloyId17 = Ti.UI.createView({
+        backgroundColor: "#f8f8f8",
+        height: "60dp",
+        id: "__alloyId17"
     });
-    $.__views.win1.add($.__views.feelingBoredButton);
-    feelingBoredClicked ? $.__views.feelingBoredButton.addEventListener("click", feelingBoredClicked) : __defers["$.__views.feelingBoredButton!click!feelingBoredClicked"] = true;
-    $.__views.feelingHungryButton = Ti.UI.createButton({
-        width: "150",
-        height: "50",
+    $.__views.win1.add($.__views.__alloyId17);
+    $.__views.__alloyId18 = Ti.UI.createLabel({
+        width: Ti.UI.SIZE,
+        height: Ti.UI.SIZE,
+        color: "#000",
         font: {
-            fontSize: "16dp"
+            fontSize: "20dp"
         },
-        id: "feelingHungryButton",
-        title: "Feeling hungry",
-        top: "10"
+        text: "Vote for you favorite",
+        id: "__alloyId18"
     });
-    $.__views.win1.add($.__views.feelingHungryButton);
-    feelingHungryClicked ? $.__views.feelingHungryButton.addEventListener("click", feelingHungryClicked) : __defers["$.__views.feelingHungryButton!click!feelingHungryClicked"] = true;
-    $.__views.viewToDoLaterButton = Ti.UI.createButton({
+    $.__views.__alloyId17.add($.__views.__alloyId18);
+    $.__views.__alloyId19 = Ti.UI.createView({
+        backgroundImage: "divider.png",
+        height: "2dp",
+        id: "__alloyId19"
+    });
+    $.__views.win1.add($.__views.__alloyId19);
+    $.__views.__alloyId20 = Ti.UI.createView({
+        backgroundColor: "#f8f8f8",
+        height: "60dp",
+        id: "__alloyId20"
+    });
+    $.__views.win1.add($.__views.__alloyId20);
+    $.__views.__alloyId21 = Ti.UI.createButton({
         width: "200dp",
         height: "50dp",
         font: {
             fontSize: "16dp"
         },
-        id: "viewToDoLaterButton",
-        title: "Your List",
-        top: "10"
+        backgroundColor: "#f8f8f8",
+        title: "Vote",
+        id: "__alloyId21"
     });
-    $.__views.win1.add($.__views.viewToDoLaterButton);
-    viewToDoLaterClicked ? $.__views.viewToDoLaterButton.addEventListener("click", viewToDoLaterClicked) : __defers["$.__views.viewToDoLaterButton!click!viewToDoLaterClicked"] = true;
+    $.__views.__alloyId20.add($.__views.__alloyId21);
+    voteClicked ? $.__views.__alloyId21.addEventListener("click", voteClicked) : __defers["$.__views.__alloyId21!click!voteClicked"] = true;
+    $.__views.__alloyId22 = Ti.UI.createView({
+        backgroundImage: "divider.png",
+        height: "2dp",
+        id: "__alloyId22"
+    });
+    $.__views.win1.add($.__views.__alloyId22);
+    $.__views.__alloyId23 = Ti.UI.createView({
+        backgroundColor: "#f8f8f8",
+        height: "60dp",
+        id: "__alloyId23"
+    });
+    $.__views.win1.add($.__views.__alloyId23);
+    $.__views.__alloyId24 = Ti.UI.createLabel({
+        width: Ti.UI.SIZE,
+        height: Ti.UI.SIZE,
+        color: "#000",
+        font: {
+            fontSize: "20dp"
+        },
+        backgroundColor: "#f8f8f8",
+        text: "Search",
+        id: "__alloyId24"
+    });
+    $.__views.__alloyId23.add($.__views.__alloyId24);
+    $.__views.__alloyId25 = Ti.UI.createView({
+        backgroundImage: "divider.png",
+        height: "2dp",
+        id: "__alloyId25"
+    });
+    $.__views.win1.add($.__views.__alloyId25);
+    $.__views.__alloyId26 = Ti.UI.createView({
+        backgroundColor: "#f8f8f8",
+        height: "60dp",
+        id: "__alloyId26"
+    });
+    $.__views.win1.add($.__views.__alloyId26);
+    $.__views.__alloyId27 = Ti.UI.createButton({
+        width: "200dp",
+        height: "50dp",
+        font: {
+            fontSize: "16dp"
+        },
+        backgroundColor: "#f8f8f8",
+        title: "Search",
+        id: "__alloyId27"
+    });
+    $.__views.__alloyId26.add($.__views.__alloyId27);
+    searchClicked ? $.__views.__alloyId27.addEventListener("click", searchClicked) : __defers["$.__views.__alloyId27!click!searchClicked"] = true;
     $.__views.nav = Ti.UI.iPhone.createNavigationGroup({
         window: $.__views.win1,
         id: "nav"
@@ -75,12 +124,10 @@ function Controller() {
     _.extend($, $.__views);
     Alloy.CFG.nav = $.nav;
     $.index.open();
-    __defers["$.__views.feelingBoredButton!click!feelingBoredClicked"] && $.__views.feelingBoredButton.addEventListener("click", feelingBoredClicked);
-    __defers["$.__views.feelingHungryButton!click!feelingHungryClicked"] && $.__views.feelingHungryButton.addEventListener("click", feelingHungryClicked);
-    __defers["$.__views.viewToDoLaterButton!click!viewToDoLaterClicked"] && $.__views.viewToDoLaterButton.addEventListener("click", viewToDoLaterClicked);
-    __defers["$.__views.feelingBoredButton!click!feelingBoredClicked"] && $.__views.feelingBoredButton.addEventListener("click", feelingBoredClicked);
-    __defers["$.__views.feelingHungryButton!click!feelingHungryClicked"] && $.__views.feelingHungryButton.addEventListener("click", feelingHungryClicked);
-    __defers["$.__views.viewToDoLaterButton!click!viewToDoLaterClicked"] && $.__views.viewToDoLaterButton.addEventListener("click", viewToDoLaterClicked);
+    __defers["$.__views.__alloyId10!click!voteClicked"] && $.__views.__alloyId10.addEventListener("click", voteClicked);
+    __defers["$.__views.__alloyId16!click!searchClicked"] && $.__views.__alloyId16.addEventListener("click", searchClicked);
+    __defers["$.__views.__alloyId21!click!voteClicked"] && $.__views.__alloyId21.addEventListener("click", voteClicked);
+    __defers["$.__views.__alloyId27!click!searchClicked"] && $.__views.__alloyId27.addEventListener("click", searchClicked);
     _.extend($, exports);
 }
 
