@@ -1,41 +1,23 @@
 <Alloy>
+
     <!-- Anddroid Window -->
 	<Window id="index" platform="android">
-		<!-- <Require src="win1content"/>  -->
-		<View id="mapview" ns="Ti.Map" onClick="doClick" onComplete="setRegion"
-		            animate="true" regionFit="true" userLocation="true"
-		            mapType="Ti.Map.STANDARD_TYPE" >
-		
-		            <Annotation id="mountainView"
-		              latitude="37.390749" longitude="-122.081651"
-		              title="Appcelerator Headquarters" subtitle="Mountain View, CA"
-		              pincolor="Titanium.Map.ANNOTATION_RED"
-		              leftButton="/images/appcelerator_small.png"
-		              myid="1"/>
-		
-		            <!-- Place other child views here, such as an ImageView to add an overlay. -->
-		
-		        </View>
+		<Button id="feelingBoredButton" onClick="feelingBoredClicked" title="Feeling bored"
+            		top="10" width="200dp" height="50dp" />
+        <Button id="feelingHungryButton" onClick="feelingHungryClicked" title="Feeling hungry"
+            		top="10" width="200dp" height="50dp" />
 	</Window>
 	
     <!-- iOS Window -->
-        <NavigationWindow id="nav" platform="ios">
-            <Window id="win1" title="Red Window" backgroundColor="red">
-                <!-- <Require src="win1content"/>    -->
-                <View id="mapview" ns="Ti.Map" onClick="doClick" onComplete="setRegion" onRegionChanged="mapRegionChanged"
-		            animate="true" regionFit="true" userLocation="true"
-		            mapType="Ti.Map.STANDARD_TYPE" >
-		
-		            <Annotation id="mountainView"
-		              latitude="37.390749" longitude="-122.081651"
-		              title="Appcelerator Headquarters" subtitle="Mountain View, CA"
-		              pincolor="Titanium.Map.ANNOTATION_RED"
-		              leftButton="/images/appcelerator_small.png"
-		              myid="1"/>
-		
-		            <!-- Place other child views here, such as an ImageView to add an overlay. -->
-		
-		        </View>
+	<Window id="index" platform="ios">
+        <NavigationGroup id="nav">
+            <Window id="win1" title="ShortStop">
+                <Button id="feelingBoredButton" onClick="feelingBoredClicked" title="Feeling bored"
+            		top="10" width="150" height="50" />
+            	<Button id="feelingHungryButton" onClick="feelingHungryClicked" title="Feeling hungry"
+            		top="10" width="150" height="50" />
             </Window>
-        </NavigationWindow>
+        </NavigationGroup>
+    </Window>
+  
 </Alloy>

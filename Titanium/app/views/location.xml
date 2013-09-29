@@ -1,0 +1,15 @@
+<Alloy>
+	<Window id="locationWindow" title="Location">
+			<Label id="doItLabel">Do It!</Label>
+			<ImageView id="mainImageView" image="http://whatscookingamerica.net/Foto3/ClamChowder.jpg" />
+			<Label id="thingNameLabel">Clam Chowder</Label>
+			<Label id="locationNameLabel">Boudin Restaurant</Label>
+			<Label id="reviewsLabel">Reviews</Label>
+			<View id="actionsView" layout="horizontal">
+				<Button width="150dp" height="50dp" left="10dp" title="Did It!"
+					onClick="onDidItClicked"></Button>
+				<Button width="150dp" height="50dp" right="10dp" title="Later"
+					onClick="onLaterClicked"></Button>
+			</View>
+	</Window>
+</Alloy>

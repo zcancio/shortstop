@@ -1,5 +1,5 @@
-exports.openWin = function(navGroup, winName) {
-    if ("undefined" == typeof Alloy) var w = winName; else var w = Alloy.createController(winName).getView();
+exports.openWin = function(navGroup, winName, payload) {
+    if ("undefined" == typeof Alloy) var w = winName; else var w = Alloy.createController(winName, payload).getView();
     if ("android" === Ti.Platform.osname) {
         w.addEventListener("open", function() {
             if (w.getActivity()) {
@@ -14,7 +14,7 @@ exports.openWin = function(navGroup, winName) {
             } else Ti.API.error("Can't access action bar on a lightweight window.");
         });
         w.open();
-    } else navGroup.openWindow(w, {
+    } else navGroup.open(w, {
         animated: true
     });
 };

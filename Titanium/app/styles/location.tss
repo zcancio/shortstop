@@ -1,0 +1,9 @@
+"#locationWindow": {
+	backgroundColor:"white"	,
+	layout: "vertical"
+}
+
+"#locationButton": {
+	height: "40dp",
+	width: "120dp"
+}

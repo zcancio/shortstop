@@ -1,0 +1,22 @@
+<Alloy>
+    <!-- Anddroid Window -->
+		<Window id="mapWindow" title="Map">
+			<!-- <Require src="win1content"/>  -->
+			<View id="mapview" ns="Ti.Map" onClick="mapClicked" onComplete="setRegion"
+			            animate="true" regionFit="true" userLocation="true"
+			            mapType="Ti.Map.STANDARD_TYPE" >
+			
+			            <!-- <Annotation id="mountainView"
+			              latitude="37.390749" longitude="-122.081651"
+			              title="Appcelerator Headquarters" subtitle="Mountain View, CA"
+			              pincolor="Titanium.Map.ANNOTATION_RED"
+			              leftButton="/images/appcelerator_small.png"
+			              userLocation="true"
+			              myid="1"/> -->
+			
+			            <!-- Place other child views here, such as an ImageView to add an overlay. -->
+			
+			        </View>
+		</Window>
+
+</Alloy>

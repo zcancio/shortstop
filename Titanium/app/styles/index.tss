@@ -7,3 +7,11 @@
 "#index[platform=ios]":{
  	backgroundColor:"white"
 }
+
+"#index": {
+	layout: "vertical"
+}
+
+"#win1": {
+	layout: "vertical"
+}
