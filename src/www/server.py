@@ -27,6 +27,7 @@ import utils.ui_methods
 from utils.settings import *
 
 define("port", default=None, help="run on the given port", type=int)
+define("port_offset", default=0, help="port - port_offset = real_port. this is helpful with supervisor")
 
 # class Application(tornado.wsgi.WSGIApplication):
 class Application(tornado.web.Application):
@@ -76,8 +77,8 @@ def main():
     from tornado.httpserver import HTTPServer 
     tornado.options.parse_command_line()
     http_server = tornado.httpserver.HTTPServer(Application())
-    real_port = options.port
-    http_server.listen(options.port)
+    real_port = options.port - options.port_offset
+    http_server.listen(real_port)
     print('Listening at port %s' % real_port)
     
     ioloop = tornado.ioloop.IOLoop.instance()
