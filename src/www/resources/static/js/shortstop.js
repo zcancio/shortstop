@@ -101,6 +101,29 @@ function initMap(lat,lng){
 
 	});
 
+	var zoom_in_btn = $('.zoom-in');
+	var zoom_out_btn = $('.zoom-out');
+
+	zoom_in_btn.on('click', function(){
+		console.log('zoom-in');
+		var current_zoom = map.getZoom();
+		map.setZoom(current_zoom+1);
+
+		var map_center = map.getCenter();
+		refreshMap(map_center.lat(),map_center.lng());
+
+
+	});
+
+	zoom_out_btn.on('click', function(){
+		console.log('zoom-out');
+		var current_zoom = map.getZoom();
+		map.setZoom(current_zoom-1);
+		
+		var map_center = map.getCenter();
+		refreshMap(map_center.lat(),map_center.lng());
+	});
+
 	
 
 }
