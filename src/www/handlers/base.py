@@ -3,12 +3,12 @@ import tornado.escape
 
 import utils.validationmixin
 
+import uuid
+
 class BaseHandler(tornado.web.RequestHandler, utils.validationmixin.ValidationMixin):
     @property
     def mysqldb(self):
-        return self.application.db
-
-
+        return self.application.mysqldb
 
     @property
     def s3(self):
@@ -21,6 +21,9 @@ class BaseHandler(tornado.web.RequestHandler, utils.validationmixin.ValidationMi
     @property
     def redis(self):
         return self.application.redis
+
+    def check_xsrf_cookie(self):
+        pass
 
 
 
@@ -43,15 +46,28 @@ class BaseHandler(tornado.web.RequestHandler, utils.validationmixin.ValidationMi
         else:
             super(BaseHandler, self).render(template_name, **kwargs)
 
-    # # authorization
-    # def get_current_user(self):
-    #     # normal web request
-    #     user_json = self.get_secure_cookie("user")
-    #     if not user_json:
-    #         return None
-    #     user = tornado.escape.json_decode(user_json)
-    #     return self.db.get("""SELECT id, email, mixpanel_distinct_id FROM user WHERE id = %s""", user['id'])
+
+    def prepare(self):
+
+        # get user cookie, if None, set user cookie via UUID
+        user_uuid = self.get_cookie('user_uuid')
+        if not user_uuid:
+            new_user_uuid = str(uuid.uuid4())
+            self.set_cookie('user_uuid', tornado.escape.url_escape(new_user_uuid))
+        
 
 
+    def get_current_user(self):
+        # normal web request
+        user_uuid_encoded = self.get_cookie("user_uuid")
+        user_uuid = None
+        if user_uuid_encoded:
+            user_uuid = tornado.escape.url_unescape(user_uuid_encoded)
+
+        if user_uuid is None:
+            user_uuid = str(uuid.uuid4())
+            self.set_cookie('user_uuid', tornado.escape.url_escape(user_uuid))
+
+        return user_uuid
 
 

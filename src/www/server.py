@@ -56,12 +56,12 @@ class Application(tornado.web.Application):
         tornado.web.Application.__init__(self, handlers, **settings)
 
         # mysql
-        # self.mysqldb = torndb.Connection(
-        #     host=MYSQL_DB_HOST, 
-        #     database=MYSQL_DB_NAME,
-        #     user=MYSQL_DB_USER, 
-        #     password=MYSQL_DB_PASSWORD
-        # )
+        self.mysqldb = torndb.Connection(
+            host=MYSQL_DB_HOST, 
+            database=MYSQL_DB_NAME,
+            user=MYSQL_DB_USER, 
+            password=MYSQL_DB_PASSWORD
+        )
 
         # s3
         self.s3 = S3Connection(S3_ACCESS_KEY_ID, S3_SECRET_ACCESS_KEY)

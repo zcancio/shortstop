@@ -17,6 +17,7 @@ function initApp() {
 	initMap();
 
 	navigator.geolocation.getCurrentPosition(function(position) {
+		console.log(position);
 		refreshMap(position.coords.latitude, position.coords.longitude);
 	});
 
@@ -47,7 +48,6 @@ function initMap(lat,lng){
 	});
 
 	
-
 
 }
 
@@ -98,8 +98,10 @@ function refreshMarkers(venues){
 	for (var i in venues) {
 		var venue = venues[i];
 
+
 		var marker = new google.maps.Marker({
-			position: new google.maps.LatLng(venue['location']['lat'],venue['location']['lng']),
+			// position: new google.maps.LatLng(venue['location']['lat'],venue['location']['lng']),
+			position: new google.maps.LatLng(venue['lat'],venue['lng']),
 			map: map,
 			icon: foodMarkerimage
 			// icon: image // This path is the custom pin to be shown. Remove this line and the proceeding comma to use default pin
