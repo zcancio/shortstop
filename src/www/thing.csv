@@ -1,0 +1,27 @@
+id,"name",venue_id,"category","votes_wanted"
+1,"Cronut",1,"food",20
+2,"Chicken and Waffles",1,"food",18
+4,"Cheeseburger",3,"food",14
+5,"BBQ Ribs",6,"food",12
+6,"Orange Mocha Frappuccino",7,"food",10
+10,"Pumpkin Spice Latte",10,"food",16
+15,"Chocolate Chip Cookies",15,"food",4
+3,"Yahoo Hack USA",2,"fun",2
+8,"Tesla Charging",8,"fun",4
+9,"Code",9,"fun",6
+12,"Art Gallery",12,"fun",8
+13,"Sculpture",13,"fun",10
+14,"Motion Capture Room",14,"fun",12
+16,"Workout",16,"fun",14
+17,"Swim in fountain",17,"fun",16
+19,"Swag Grab",19,"fun",18
+21,"View",21,"fun",20
+22,"Rooftop",22,"fun",22
+23,"Trash Jump",23,"fun",24
+25,"Nap",24,"fun",26
+11,"Yahoos",11,"drink",10
+18,"Irish Coffee",18,"drink",2
+20,"Mudslides",20,"drink",4
+27,"Launch Parties",25,"drink",6
+28,"DJ Aspire",26,"drink",8
+29,"DJ Inspire",27,"drink",12
