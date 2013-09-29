@@ -34,6 +34,21 @@ for (key in markerImages){
 }
 
 
+var categoryTitles = {
+	"food"  : "Food",
+	"drink" : "Drink",
+	"fun" : "Fun"
+}
+
+
+var categoryOverlayClasses = {
+	"food"  : "hungry",
+	"drink" : "sober",
+	"fun" : "bored"
+}
+
+
+
 
 function initApp() {
 
@@ -102,8 +117,8 @@ function refreshMap(lat,lng){
     sw = bounds.getSouthWest();
     ne = bounds.getNorthEast();
 
-    console.log(sw);
-    console.log(ne);
+    // console.log(sw);
+    // console.log(ne);
 
 
 	// 1. get new venues
@@ -138,6 +153,18 @@ function refreshMap(lat,lng){
     center = new google.maps.LatLng(lat, lng);
     map.setCenter(center);
 
+    // update overlay navbar
+    var overlay_header = $(".category");
+    var overlay_header_text = $(".category h2");
+
+    overlay_header_text.text(categoryTitles[current_category]);
+
+    overlay_header.removeClass('hungry');
+    overlay_header.removeClass('sober');
+    overlay_header.removeClass('bored');
+
+
+    overlay_header.addClass(categoryOverlayClasses[current_category]);
 
 
 	
