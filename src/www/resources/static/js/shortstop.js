@@ -141,6 +141,7 @@ function refreshMap(lat,lng){
         success: function(results, textStatus, jqXHR) {
         	console.log(results);
 
+
         	refreshMarkers(results['venues']);
 
         },
@@ -176,6 +177,8 @@ function refreshMarkers(venues){
 	for (var i in markers) {
 		markers[i].setMap(null);
 	}
+
+	markers = [];
 
 	for (var i in venues) {
 		var venue = venues[i];
