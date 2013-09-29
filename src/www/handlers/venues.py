@@ -8,6 +8,65 @@ import requests
 import utils.settings
 
 
+
+class VenuesSearchByThingsHandler(BaseHandler):
+
+    def get(self):
+
+        category = self.valid("category")
+        sw_lat = self.valid("sw_lat")
+        sw_lng = self.valid("sw_lng")
+        ne_lat = self.valid("ne_lat")
+        ne_lng = self.valid("ne_lng")
+
+
+        # join venues and things to get lat, lng
+
+        # get all venues within area
+        # find the top thing for each venue and for the given category
+        # rank things in order of vote_count 
+        # get the first 10.
+
+        venues = self.mysqldb.query("""SELECT * FROM venue 
+            WHERE lat >= %s AND lat <= %s
+            AND lng >= %s AND lng <= %s
+            """,
+            sw_lat,
+            ne_lat,
+            sw_lng,
+            ne_lng
+            )
+
+        for venue in venues:
+            things = self.mysqldb.query("""SELECT thing.*, count(*) AS vote_count FROM thing JOIN vote ON thing.id = vote.thing_id 
+                WHERE thing.venue_id=%s 
+                AND thing.category=%s 
+                GROUP BY thing.id
+                ORDER BY vote_count DESC""",
+                venue.id,
+                category)
+            venue['things'] = things
+
+            venue['top_vote_count'] = 0
+            if len(things) > 0:
+                venue['top_vote_count'] = things[0]['vote_count']
+
+
+        ordered_venues = sorted(venues, key=lambda venue: venue['top_vote_count'], reverse=True)
+
+        # for venue in ordered_venues:
+        #     print venue['top_vote_count']
+        print len(ordered_venues)
+        limit_ordered_venues = ordered_venues[0:10]
+        print len(limit_ordered_venues)
+
+
+
+        self.write({'Status' : 'OK', 'venues' : limit_ordered_venues})
+
+
+
+
 class VenuesSearchHandler(BaseHandler):
     def get(self):
         lat = self.valid('lat')
