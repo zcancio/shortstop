@@ -19,6 +19,7 @@
 			<a href="#" class="pure-menu-heading"><img src="{{static_url('img/logo.png')}}" /></a>
 		</div>
 
+		<!-- {# ZOOM BUTTONS #} -->
 		<div id="map-container">
 			<div class="zoom-ui">
 					<div class="zoom-in">
@@ -31,6 +32,7 @@
 			<div id="map"></div>
 		</div>
 
+		<!-- {# OVERLAY #} -->
 		<div id="overlay">
 		    <a href="#" class="close">&times;</a>
     	    <div class="category hungry">
@@ -40,10 +42,12 @@
     	    	<h2>My Location</h2>
     	    </div>
     	    <div class="venue">
+    	    	<div class="back-arrow disabled"></div>
     	    	<h2>Venue</h2>
     	    	<div class="arrow"></div>
     	    </div>
     	    <div class="item">
+    	    	<div class="back-arrow disabled"></div>
     	    	<h2>Item</h2>
     	    	<div class="arrow"></div>
     	    </div>
@@ -53,18 +57,41 @@
 		</div>
 		<div id="mask" onclick="document.location='#';"></div>
 
+		<!-- {# DO IT #} -->
 		<div id="do-it">
 			<h2>Do It!</h2>
 			<div class="do-it-content">
+				<div class="item-header-food"></div>
 				<h2>Item</h2>
-				<h2>Venue</h2>
+				<p>Venue</p>
 				<div class="pure-button">Reviews</div>
 			</div>
 			<div class="pure-button green-button-sm">I did it!</div>
-			<div class="pure-button green-button-sm">Do it Later</div>
+			<a href="#itinerary"><div class="pure-button green-button-sm">Do it Later</div></a>
 		</div>
 		<div id="mask" onclick="document.location='#';"></div>
 
+		<!-- {# ITINERARY #} -->
+		<div id="itinerary">
+			<h2>Make a Day of it</h2>
+			<div class="itinerary-content">
+				<p>Add these items to your list and plan your day with shortstop</p>
+				<div class="item-1">
+					<div class="item-header-drink"></div>
+					<h2>Stella Artois</h2>
+					<p>Open Bar at Yahoo</p>
+				</div>
+				<div class="item-2">
+					<div class="item-header-fun"></div>
+					<h2>Hack USA 2013</h2>
+					<p>Yahoo</p>
+				</div>
+				<div class="pure-button green-button-sm">Book it!</div>
+			</div>
+		</div>
+		<div id="mask" onclick="document.location='#';"></div>
+
+		<!-- {# BUTTONS #} -->
 		<div id="button-bar">
 			<div class="buttons">
 				<a href="#"><div class="pure-button hungry">I'm Hungry</div></a>

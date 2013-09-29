@@ -197,10 +197,11 @@
 	#overlay { 
 		width:80%;
 		margin:0 auto;
-		background:#f5f5f5;
+		background:#fafafa;
+		box-shadow: 0 2px 4px rgba(0,0,0,.25);
 		border-top:white;
 		border-bottom:1px ;
-		color:black;
+		color:#444;
 		padding:30px 0px 20px 0px;
 		position:absolute;
 		top:100px;
@@ -218,6 +219,7 @@
 			text-shadow: 0 1px 0 rgba(255,255,255,.25);
 		}
 
+
 		.arrow {
 			background:url(../img/arrow.png);
 			width: 20px;
@@ -227,6 +229,21 @@
 			right:20px;
 			margin-top:-45px;
 			opacity: .3;
+		}
+
+		.back-arrow {
+			background:url(../img/back-arrow.png);
+			width: 20px;
+			height: 23px;
+			display: block;
+			float: left;
+			margin:22px 10px 0px -10px;
+			opacity: .3;
+		}
+
+
+		.disabled {
+			display:none;
 		}
 
 		.location {
@@ -313,7 +330,8 @@
 		background-position: center;
 		border-top:1px white solid;
 		border-bottom:1px #ddd solid;
-		color:black;
+		box-shadow: 0 2px 4px rgba(0,0,0,.25);
+		color:#444;
 		padding:20px 0px;
 		position:absolute;
 		top:100px;
@@ -330,13 +348,102 @@
 
 		.do-it-content {
 			background:#f5f5f5;
-			width:50%;
+			width:70%;
 			margin:0 auto;
-			padding:20px;
+			padding:20px 0px;
 			position: relative;
-			box-shadow: 0 2px 4px rgba(0,0,0,.4);
+			box-shadow: 0 2px 4px rgba(0,0,0,.25);
+			border-radius: 4px;
+
+			.item-header-food {
+				position: absolute;
+					width:100%;
+					height:20px;
+					top:0;
+					background:#f5c912;
+					margin-bottom:20px;
+					border-radius:4px 4px 0px 0px;
+			}
 		}
 
+
+	}
+
+	#itinerary { 
+		width:85%;
+		margin:0 auto;
+		background:#fafafa;
+		background-position: center;
+		border-top:1px white solid;
+		border-bottom:1px #ddd solid;
+		box-shadow: 0 2px 4px rgba(0,0,0,.25);
+		color:#444;
+		padding:20px 0px;
+		position:absolute;
+		top:100px;
+		left:7.5%;
+		z-index:1000;
+		display:none;
+		/* CSS 3 */
+		-webkit-border-radius:10px;
+		-moz-border-radius:10px;
+		-o-border-radius:10px;
+		border-radius:4px;
+		overflow: hidden;
+		text-align: center;
+
+		.itinerary-content {
+
+			.item-1 {
+			
+				background:#f5f5f5;
+				width:60%;
+				margin:20px auto 20px auto;
+				padding:20px 0px;
+				position: relative;
+				box-shadow: 0 2px 4px rgba(0,0,0,.25);
+				height:100px;
+				border-radius:4px;
+
+				.item-header-drink {
+					position: absolute;
+					width:100%;
+					height:20px;
+					top:0;
+					background:#badfce;
+					margin-bottom:20px;
+					border-radius:4px 4px 0px 0px;
+					
+
+				}
+			}
+
+			.item-2 {
+			
+				background:#f5f5f5;
+				width:60%;
+				margin:0 auto;
+				padding:20px 0px;
+				position: relative;
+				box-shadow: 0 2px 4px rgba(0,0,0,.25);
+				height:100px;
+				border-radius:4px;
+
+				.item-header-fun {
+					position: absolute;
+					width:100%;
+					height:20px;
+					top:0;
+					background:#ee5c20;
+					margin-bottom:20px;
+					border-radius:4px 4px 0px 0px;
+					
+
+				}
+			}
+
+
+		}
 
 	}
 
@@ -359,6 +466,12 @@
 	}
 
 	#do-it:target, #do-it:target + #mask {
+		display:block;
+		opacity:1;
+		transition: opacity .25s;
+	}
+
+	#itinerary:target, #itinerary:target + #mask {
 		display:block;
 		opacity:1;
 		transition: opacity .25s;
@@ -584,7 +697,8 @@
 		background:#f5f5f5;
 		border-top:1px white solid;
 		border-bottom:1px #ddd solid;
-		color:black;
+		box-shadow: 0 2px 4px rgba(0,0,0,.25);
+		color:444;
 		padding:20px 0px;
 		position:absolute;
 		top:5%;
@@ -617,6 +731,22 @@
 			margin-top:-40px;
 			opacity: .3;
 		}
+
+		.back-arrow {
+			background:url(../img/back-arrow.png);
+			width: 20px;
+			height: 23px;
+			display: block;
+			float: left;
+			margin:13px 10px 0px -10px;
+			opacity: .3;
+		}
+
+
+		.disabled {
+			display:none;
+		}
+
 		.location {
 			padding-left:20px;
 			width: 100%;
@@ -701,7 +831,8 @@
 		background-position: center;
 		border-top:1px white solid;
 		border-bottom:1px #ddd solid;
-		color:black;
+		box-shadow: 0 2px 4px rgba(0,0,0,.25);
+		color:#444;
 		padding:20px 0px;
 		position:absolute;
 		top:10%;
@@ -717,20 +848,106 @@
 		text-align: center;
 		margin-bottom:20px;
 
-		h2 {
-			padding:0px;
-			margin:0px 0px 10px 0px;
-		}
 
 		.do-it-content {
 			background:#f5f5f5;
 			width:70%;
 			margin:0 auto;
-			padding:20px;
+			padding:20px 0px;
 			position: relative;
 			box-shadow: 0 2px 4px rgba(0,0,0,.4);
+			margin-bottom:10px;
+
+			.item-header-food {
+				position: absolute;
+				width:100%;
+				height:20px;
+				top:0;
+				background:#f5c912;
+				border-radius:4px 4px 0px 0px;
+				margin-bottom:20px;
+			}
 		}
 
+
+	}
+
+	#itinerary { 
+		width:85%;
+		margin:0 auto;
+		background:#fafafa;
+		background-position: center;
+		border-top:1px white solid;
+		border-bottom:1px #ddd solid;
+		box-shadow: 0 2px 4px rgba(0,0,0,.25);
+		color:#444;
+		padding:10px 0px;
+		position:absolute;
+		top:10%;
+		left:7.5%;
+		z-index:1000;
+		display:none;
+		/* CSS 3 */
+		-webkit-border-radius:10px;
+		-moz-border-radius:10px;
+		-o-border-radius:10px;
+		border-radius:4px;
+		overflow: hidden;
+		text-align: center;
+
+		.itinerary-content {
+
+			.item-1 {
+			
+				background:#f5f5f5;
+				width:70%;
+				margin:20px auto 20px auto;
+				padding:20px 0px;
+				position: relative;
+				box-shadow: 0 2px 4px rgba(0,0,0,.25);
+				height:100px;
+				border-radius:4px;
+
+				.item-header-drink {
+					position: absolute;
+					width:100%;
+					height:20px;
+					top:0;
+					background:#badfce;
+					margin-bottom:10px;
+					border-radius:4px 4px 0px 0px;
+					
+
+				}
+			}
+
+			.item-2 {
+			
+				background:#f5f5f5;
+				width:70%;
+				margin:0 auto;
+				padding:20px 0px;
+				position: relative;
+				box-shadow: 0 2px 4px rgba(0,0,0,.25);
+				height:100px;
+				border-radius:4px;
+				margin-bottom:20px;
+
+				.item-header-fun {
+					position: absolute;
+					width:100%;
+					height:20px;
+					top:0;
+					background:#ee5c20;
+					margin-bottom:10px;
+					border-radius:4px 4px 0px 0px;
+					
+
+				}
+			}
+
+
+		}
 
 	}
 
@@ -752,6 +969,11 @@
 	}
 
 	#do-it:target, #do-it:target + #mask {
+		display:block;
+		opacity:1;
+	}
+
+	#itinerary:target, #itinerary:target + #mask {
 		display:block;
 		opacity:1;
 	}
