@@ -26,5 +26,10 @@ function feelingBoredClicked(event) {
 
 function feelingHungryClicked(event) {
 	var xpng=require('xpng');
-	xpng.openWin(Alloy.CFG.nav,'map',{});		
+	xpng.openWin(Alloy.CFG.nav,'location',{});		
+}
+
+function viewToDoLaterClicked(event) {
+	var xpng=require('xpng');
+	xpng.openWin(Alloy.CFG.nav,'doItLater',{});
 }

@@ -1,7 +1,7 @@
 <Alloy>
 	<Window id="locationWindow" title="Location">
 			<Label id="doItLabel">Do It!</Label>
-			<ImageView id="mainImageView" image="http://whatscookingamerica.net/Foto3/ClamChowder.jpg" />
+			<ImageView id="mainImageView" image="https://static.ashortstop.com.s3.amazonaws.com/testing.png" />
 			<Label id="thingNameLabel">Clam Chowder</Label>
 			<Label id="locationNameLabel">Boudin Restaurant</Label>
 			<Label id="reviewsLabel">Reviews</Label>

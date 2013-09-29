@@ -29,7 +29,6 @@ dependencies: \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiFile.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiBuffer.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiBlob.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/XHRBridge.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiRootViewController.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiControllerProtocols.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiViewProxy.h \

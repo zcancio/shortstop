@@ -16,8 +16,4 @@ dependencies: \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/KrollCallback.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/KrollObject.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiBindingRunLoop.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiNetworkSocketTCPProxy.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiStreamProxy.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/Tibuffer.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiBlob.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/AsyncSocket.h
+  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiNetworkSocketTCPProxy.h

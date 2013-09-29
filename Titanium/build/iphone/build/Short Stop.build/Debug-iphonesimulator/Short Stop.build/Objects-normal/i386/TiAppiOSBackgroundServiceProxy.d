@@ -16,9 +16,6 @@ dependencies: \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/KrollCallback.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/KrollObject.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiBindingRunLoop.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/KrollBridge.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/Bridge.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiModule.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiUtils.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiDimension.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiColor.h \
@@ -28,8 +25,10 @@ dependencies: \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiBlob.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiApp.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiHost.h \
+  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/Bridge.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiStylesheet.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/XHRBridge.h \
+  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/KrollBridge.h \
+  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiModule.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiRootViewController.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiControllerProtocols.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiViewProxy.h \

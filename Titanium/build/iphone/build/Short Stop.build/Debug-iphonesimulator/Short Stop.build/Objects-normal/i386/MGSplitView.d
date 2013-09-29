@@ -1,13 +1,12 @@
 dependencies: \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/MGSplitView/MGSplitView.m \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/MGSplitView/MGSplitView.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/MGSplitView/MGSplitViewController.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiBase.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiThreading.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiPublicAPI.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiApp.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiHost.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiProxy.h \
+  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiBase.h \
+  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiThreading.h \
+  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiPublicAPI.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiEvaluator.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/KrollContext.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/headers/TiCore/TiCore.h \
@@ -30,7 +29,6 @@ dependencies: \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiFile.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiBuffer.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiBlob.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/XHRBridge.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiRootViewController.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiControllerProtocols.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiViewProxy.h \

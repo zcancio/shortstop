@@ -44,5 +44,4 @@ dependencies: \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/Bridge.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiStylesheet.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/KrollBridge.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/XHRBridge.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiRootViewController.h

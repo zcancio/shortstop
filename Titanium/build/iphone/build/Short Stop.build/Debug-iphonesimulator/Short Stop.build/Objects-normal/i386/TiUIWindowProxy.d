@@ -53,6 +53,5 @@ dependencies: \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiApp.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiHost.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiStylesheet.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/XHRBridge.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiRootViewController.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiLayoutQueue.h

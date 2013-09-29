@@ -49,9 +49,9 @@ function Controller() {
         title: "Map"
     });
     $.__views.mapWindow && $.addTopLevelView($.__views.mapWindow);
-    var __alloyId2 = [];
+    var __alloyId8 = [];
     $.__views.mapview = Ti.Map.createView({
-        annotations: __alloyId2,
+        annotations: __alloyId8,
         id: "mapview",
         ns: Ti.Map,
         animate: "true",

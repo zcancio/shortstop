@@ -1,0 +1,4 @@
+".doItLater": {
+	backgroundColor: "white",
+	layout: "vertical"
+}

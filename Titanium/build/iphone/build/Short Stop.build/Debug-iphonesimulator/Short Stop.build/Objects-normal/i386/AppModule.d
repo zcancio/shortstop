@@ -32,7 +32,6 @@ dependencies: \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/ListenerEntry.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiApp.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/KrollBridge.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/XHRBridge.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiRootViewController.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiControllerProtocols.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiViewProxy.h \
@@ -43,6 +42,4 @@ dependencies: \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiGradient.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiRect.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiViewTemplate.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiAppiOSProxy.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiAppiOSBackgroundServiceProxy.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiLayoutQueue.h

@@ -5,7 +5,11 @@ function Controller() {
     }
     function feelingHungryClicked() {
         var xpng = require("xpng");
-        xpng.openWin(Alloy.CFG.nav, "map", {});
+        xpng.openWin(Alloy.CFG.nav, "location", {});
+    }
+    function viewToDoLaterClicked() {
+        var xpng = require("xpng");
+        xpng.openWin(Alloy.CFG.nav, "doItLater", {});
     }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "index";
@@ -50,6 +54,18 @@ function Controller() {
     });
     $.__views.win1.add($.__views.feelingHungryButton);
     feelingHungryClicked ? $.__views.feelingHungryButton.addEventListener("click", feelingHungryClicked) : __defers["$.__views.feelingHungryButton!click!feelingHungryClicked"] = true;
+    $.__views.viewToDoLaterButton = Ti.UI.createButton({
+        width: "200dp",
+        height: "50dp",
+        font: {
+            fontSize: "16dp"
+        },
+        id: "viewToDoLaterButton",
+        title: "Your List",
+        top: "10"
+    });
+    $.__views.win1.add($.__views.viewToDoLaterButton);
+    viewToDoLaterClicked ? $.__views.viewToDoLaterButton.addEventListener("click", viewToDoLaterClicked) : __defers["$.__views.viewToDoLaterButton!click!viewToDoLaterClicked"] = true;
     $.__views.nav = Ti.UI.iPhone.createNavigationGroup({
         window: $.__views.win1,
         id: "nav"
@@ -61,8 +77,10 @@ function Controller() {
     $.index.open();
     __defers["$.__views.feelingBoredButton!click!feelingBoredClicked"] && $.__views.feelingBoredButton.addEventListener("click", feelingBoredClicked);
     __defers["$.__views.feelingHungryButton!click!feelingHungryClicked"] && $.__views.feelingHungryButton.addEventListener("click", feelingHungryClicked);
+    __defers["$.__views.viewToDoLaterButton!click!viewToDoLaterClicked"] && $.__views.viewToDoLaterButton.addEventListener("click", viewToDoLaterClicked);
     __defers["$.__views.feelingBoredButton!click!feelingBoredClicked"] && $.__views.feelingBoredButton.addEventListener("click", feelingBoredClicked);
     __defers["$.__views.feelingHungryButton!click!feelingHungryClicked"] && $.__views.feelingHungryButton.addEventListener("click", feelingHungryClicked);
+    __defers["$.__views.viewToDoLaterButton!click!viewToDoLaterClicked"] && $.__views.viewToDoLaterButton.addEventListener("click", viewToDoLaterClicked);
     _.extend($, exports);
 }
 

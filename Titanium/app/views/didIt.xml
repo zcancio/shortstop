@@ -1,0 +1,29 @@
+<Alloy>
+	<Window id="didItWindow" title="Did It" layout="vertical" background="white">
+			<Label id="didItLabel">Did It!</Label>
+			<Label>Do you want to share your own experience?</Label>
+			<View layout="horizontal"
+				height="50dp">
+				<Button 
+					title="Take Image" 
+					onClick="onTakeImageClicked"
+					width="150dp"
+					left="10dp"
+					></Button>
+				<Button 
+					title="Pick Image" 
+					onClick="onPickImageClicked"
+					width="150dp"
+					right="10dp"
+					></Button>
+			</View>
+			<ImageView id="mainImageView"
+				height="200dp"></ImageView>
+			<!-- <Button title="Upload" onClick="onUploadClicked"></Button> -->
+			<Label>Do you want to rate it?</Label>
+			<Button 
+					title="Rate!!!" 
+					onClick="onRateClicked"
+					></Button>
+	</Window>
+</Alloy>

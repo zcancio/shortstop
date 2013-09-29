@@ -6,6 +6,8 @@
             		top="10" width="200dp" height="50dp" />
         <Button id="feelingHungryButton" onClick="feelingHungryClicked" title="Feeling hungry"
             		top="10" width="200dp" height="50dp" />
+        <Button id="viewToDoLaterButton" onClick="viewToDoLaterClicked" title="Your List"
+            		top="10" width="200dp" height="50dp" />   
 	</Window>
 	
     <!-- iOS Window -->
@@ -16,6 +18,8 @@
             		top="10" width="150" height="50" />
             	<Button id="feelingHungryButton" onClick="feelingHungryClicked" title="Feeling hungry"
             		top="10" width="150" height="50" />
+            	<Button id="viewToDoLaterButton" onClick="viewToDoLaterClicked" title="Your List"
+            		top="10" width="200dp" height="50dp" /> 	
             </Window>
         </NavigationGroup>
     </Window>

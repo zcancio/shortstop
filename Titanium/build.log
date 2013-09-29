@@ -7,43 +7,38 @@ Logfile initialized
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
 [DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.020508 seconds on emulator to get ready
+[DEBUG] waited 0.015833 seconds on emulator to get ready
 [DEBUG] com.ashortstop installed? False
 [INFO] Copying CommonJS modules...
 [INFO] Copying project resources..
-[INFO] Detected change in tiapp.xml, or assets deleted. Forcing full re-build...
-[TRACE] COPYING CREATED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/backbone.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/backbone.js
-[TRACE] COPYING CREATED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/constants.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/constants.js
-[TRACE] COPYING CREATED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/controllers/BaseController.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/controllers/BaseController.js
-[TRACE] COPYING CREATED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/controllers/index.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/controllers/index.js
-[TRACE] COPYING CREATED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/controllers/location.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/controllers/location.js
-[TRACE] COPYING CREATED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/controllers/map.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/controllers/map.js
-[TRACE] COPYING CREATED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/controllers/win1content.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/controllers/win1content.js
-[TRACE] COPYING CREATED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/controllers/win2.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/controllers/win2.js
-[TRACE] COPYING CREATED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/styles/index.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/styles/index.js
-[TRACE] COPYING CREATED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/styles/location.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/styles/location.js
-[TRACE] COPYING CREATED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/styles/map.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/styles/map.js
-[TRACE] COPYING CREATED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/styles/win1content.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/styles/win1content.js
-[TRACE] COPYING CREATED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/styles/win2.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/styles/win2.js
-[TRACE] COPYING CREATED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/sync/localStorage.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/sync/localStorage.js
-[TRACE] COPYING CREATED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/sync/properties.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/sync/properties.js
-[TRACE] COPYING CREATED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/sync/sql.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/sync/sql.js
-[TRACE] COPYING CREATED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/sync/util.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/sync/util.js
-[TRACE] COPYING CREATED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/underscore.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/underscore.js
-[TRACE] COPYING CREATED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/widget.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/widget.js
-[TRACE] COPYING CREATED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy.js
-[TRACE] COPYING CREATED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/android/1_navigation_refresh.png => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/1_navigation_refresh.png
-[TRACE] COPYING CREATED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/android/2_action_settings.png => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/2_action_settings.png
-[TRACE] COPYING CREATED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/android/alloy/CFG.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/CFG.js
-[TRACE] COPYING CREATED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/android/appicon.png => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/appicon.png
-[TRACE] COPYING CREATED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/android/default.png => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/default.png
-[TRACE] COPYING CREATED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/android/images/1_navigation_refresh.png => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/images/1_navigation_refresh.png
-[TRACE] COPYING CREATED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/app.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/app.js
-[TRACE] COPYING CREATED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/xpng.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/xpng.js
+[TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/backbone.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/backbone.js
+[TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/constants.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/constants.js
+[TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/controllers/BaseController.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/controllers/BaseController.js
+[TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/controllers/didIt.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/controllers/didIt.js
+[TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/controllers/index.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/controllers/index.js
+[TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/controllers/location.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/controllers/location.js
+[TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/controllers/map.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/controllers/map.js
+[TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/controllers/win1content.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/controllers/win1content.js
+[TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/controllers/win2.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/controllers/win2.js
+[TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/styles/didIt.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/styles/didIt.js
+[TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/styles/index.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/styles/index.js
+[TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/styles/location.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/styles/location.js
+[TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/styles/map.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/styles/map.js
+[TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/styles/win1content.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/styles/win1content.js
+[TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/styles/win2.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/styles/win2.js
+[TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/sync/localStorage.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/sync/localStorage.js
+[TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/sync/properties.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/sync/properties.js
+[TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/sync/sql.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/sync/sql.js
+[TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/sync/util.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/sync/util.js
+[TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/underscore.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/underscore.js
+[TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/widget.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/widget.js
+[TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy.js
+[TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/android/alloy/CFG.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/CFG.js
+[TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/app.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/app.js
+[TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/xpng.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/xpng.js
 [DEBUG] LiveView not enabled
 [TRACE] Generating Java Classes
 [DEBUG] Processing Android resource drawables
-[DEBUG] app stylesheet => /Users/trung/dev/ShortStop/Titanium/build/android/gen/com/ashortstop/ApplicationStylesheet.java
 [DEBUG] copying app icon: /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/appicon.png
 [DEBUG] generating theme.xml
 [DEBUG] found drawable-long-land-hdpi splash screen at /Users/trung/dev/ShortStop/Titanium/Resources/android/images/res-long-land-hdpi/default.png
@@ -68,21 +63,22 @@ Logfile initialized
 [DEBUG] copying /Users/trung/dev/ShortStop/Titanium/Resources/android/images/res-notlong-port-mdpi/default.png splash screen to /Users/trung/dev/ShortStop/Titanium/build/android/res/drawable-notlong-port-mdpi/background.png
 [DEBUG] found splash screen at /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/default.png
 [TRACE] Writing out AndroidManifest.xml
-[DEBUG] adding /Users/trung/dev/ShortStop/Titanium/build/android/gen/com/ashortstop/ApplicationStylesheet.java to javac build list
 [DEBUG] adding /Users/trung/dev/ShortStop/Titanium/build/android/gen/com/ashortstop/R.java to javac build list
 [DEBUG] adding /Users/trung/dev/ShortStop/Titanium/build/android/gen/com/ashortstop/ShortStopActivity.java to javac build list
 [DEBUG] adding /Users/trung/dev/ShortStop/Titanium/build/android/gen/com/ashortstop/ShortStopAppInfo.java to javac build list
 [DEBUG] adding /Users/trung/dev/ShortStop/Titanium/build/android/gen/com/ashortstop/ShortStopApplication.java to javac build list
-[DEBUG] Building Java Sources: "/Users/trung/dev/ShortStop/Titanium/build/android/gen/com/ashortstop/ApplicationStylesheet.java" "/Users/trung/dev/ShortStop/Titanium/build/android/gen/com/ashortstop/R.java" "/Users/trung/dev/ShortStop/Titanium/build/android/gen/com/ashortstop/ShortStopActivity.java" "/Users/trung/dev/ShortStop/Titanium/build/android/gen/com/ashortstop/ShortStopAppInfo.java" "/Users/trung/dev/ShortStop/Titanium/build/android/gen/com/ashortstop/ShortStopApplication.java"
+[DEBUG] Building Java Sources: "/Users/trung/dev/ShortStop/Titanium/build/android/gen/com/ashortstop/R.java" "/Users/trung/dev/ShortStop/Titanium/build/android/gen/com/ashortstop/ShortStopActivity.java" "/Users/trung/dev/ShortStop/Titanium/build/android/gen/com/ashortstop/ShortStopAppInfo.java" "/Users/trung/dev/ShortStop/Titanium/build/android/gen/com/ashortstop/ShortStopApplication.java"
 [INFO] Compiling Android Resources... This could take some time
 [DEBUG] Android classes.dex built
 [DEBUG] creating unsigned apk: /Users/trung/dev/ShortStop/Titanium/build/android/bin/app-unsigned.apk
 [DEBUG] from resource zip => assets/Resources/alloy/controllers/BaseController.js
+[DEBUG] from resource zip => assets/Resources/alloy/controllers/didIt.js
 [DEBUG] from resource zip => assets/Resources/alloy/controllers/index.js
 [DEBUG] from resource zip => assets/Resources/alloy/controllers/location.js
 [DEBUG] from resource zip => assets/Resources/alloy/controllers/map.js
 [DEBUG] from resource zip => assets/Resources/alloy/controllers/win1content.js
 [DEBUG] from resource zip => assets/Resources/alloy/controllers/win2.js
+[DEBUG] from resource zip => assets/Resources/alloy/styles/didIt.js
 [DEBUG] from resource zip => assets/Resources/alloy/styles/index.js
 [DEBUG] from resource zip => assets/Resources/alloy/styles/location.js
 [DEBUG] from resource zip => assets/Resources/alloy/styles/map.js
@@ -151,6 +147,6 @@ Logfile initialized
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
 [DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.015348 seconds on emulator to get ready
+[DEBUG] waited 0.015825 seconds on emulator to get ready
 [INFO] Installing application on device
 [INFO] Application installed. Launch from drawer on Home Screen

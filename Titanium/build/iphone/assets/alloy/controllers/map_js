@@ -1,6 +1,13 @@
 function Controller() {
     function mapClicked(evt) {
-        Ti.API.info("Annotation " + evt.title + " clicked, id: " + evt.annotation.myid);
+        Ti.API.info("Annotation " + evt.title + " clicked, id: " + evt.annotation.myid + "evt " + evt.clicksource);
+        if ("rightButton" == evt.clicksource) {
+            Ti.API.info("Annotation " + evt.title + ", right button clicked.");
+            var xpng = require("xpng");
+            xpng.openWin(Alloy.CFG.nav, "location", {
+                myprop: "value"
+            });
+        }
         ("leftButton" == evt.clicksource || "leftPane" == evt.clicksource || "leftView" == evt.clicksource) && Ti.API.info("Annotation " + evt.title + ", left button clicked.");
     }
     function setRegion() {}
@@ -13,6 +20,7 @@ function Controller() {
             pincolor: Ti.Map.ANNOTATION_GREEN,
             animate: true,
             leftButton: "../images/appcelerator_small.png",
+            rightButton: Ti.UI.iPhone.SystemButton.DISCLOSURE,
             myid: 1
         });
         var google = Ti.Map.createAnnotation({
@@ -23,6 +31,7 @@ function Controller() {
             pincolor: Ti.Map.ANNOTATION_GREEN,
             animate: true,
             leftButton: "../images/appcelerator_small.png",
+            rightButton: Ti.UI.iPhone.SystemButton.DISCLOSURE,
             myid: 2
         });
         return [ yahoo, google ];
@@ -36,12 +45,13 @@ function Controller() {
     var exports = {};
     var __defers = {};
     $.__views.mapWindow = Ti.UI.createWindow({
-        id: "mapWindow"
+        id: "mapWindow",
+        title: "Map"
     });
     $.__views.mapWindow && $.addTopLevelView($.__views.mapWindow);
-    var __alloyId0 = [];
+    var __alloyId8 = [];
     $.__views.mapview = Ti.Map.createView({
-        annotations: __alloyId0,
+        annotations: __alloyId8,
         id: "mapview",
         ns: Ti.Map,
         animate: "true",
@@ -56,6 +66,8 @@ function Controller() {
     _.extend($, $.__views);
     var current_longitude;
     var current_latitude;
+    args = arguments[0] || {};
+    console.log(Ti.API.info(args));
     Ti.Geolocation.getCurrentPosition(function(e) {
         if (e.error) {
             Ti.API.log("error: " + JSON.stringify(e.error));

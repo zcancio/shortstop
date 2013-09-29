@@ -28,7 +28,6 @@ dependencies: \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiFile.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiBuffer.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiBlob.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/XHRBridge.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiRootViewController.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiControllerProtocols.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiViewProxy.h \
@@ -39,8 +38,4 @@ dependencies: \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/LayoutConstraint.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiGradient.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiRect.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiViewTemplate.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/MGSplitView/MGSplitViewController.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/MGSplitView/MGSplitDividerView.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/MGSplitView/MGSplitCornersView.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/MGSplitView/MGSplitView.h
+  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiViewTemplate.h

@@ -11,16 +11,11 @@ function mapClicked(evt){
     	Ti.API.info("Annotation " + evt.title + ", right button clicked.");
     	var xpng=require('xpng');
 		xpng.openWin(Alloy.CFG.nav,'location',{myprop: "value"});
-		// xpng.openWin(Alloy.CFG.nav,'map');
-		// w=Alloy.createController("location",{v: "123"}).getView();
-		// xpng.openWin(Alloy.CFG.nav,'location',{myprop:'my value'});
-
-		
     }
     // Check for all of the possible names that clicksouce
     // can report for the left button/view.
     if (evt.clicksource == 'leftButton' || evt.clicksource == 'leftPane' ||
-        evt.clicksource == 'leftView') {
+        evt.clicksource == "leftView") {
         Ti.API.info("Annotation " + evt.title + ", left button clicked.");
         
         // var xpng=require('xpng');

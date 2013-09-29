@@ -1,5 +1,10 @@
 function Controller() {
-    function onDidItClicked() {}
+    function onDidItClicked() {
+        var xpng = require("xpng");
+        xpng.openWin(Alloy.CFG.nav, "didIt", {
+            myprop: "value"
+        });
+    }
     function onLaterClicked() {}
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "location";
@@ -29,7 +34,7 @@ function Controller() {
     $.__views.locationWindow.add($.__views.doItLabel);
     $.__views.mainImageView = Ti.UI.createImageView({
         id: "mainImageView",
-        image: "http://whatscookingamerica.net/Foto3/ClamChowder.jpg"
+        image: "https://static.ashortstop.com.s3.amazonaws.com/testing.png"
     });
     $.__views.locationWindow.add($.__views.mainImageView);
     $.__views.thingNameLabel = Ti.UI.createLabel({
@@ -70,7 +75,7 @@ function Controller() {
         layout: "horizontal"
     });
     $.__views.locationWindow.add($.__views.actionsView);
-    $.__views.__alloyId0 = Ti.UI.createButton({
+    $.__views.__alloyId6 = Ti.UI.createButton({
         width: "150dp",
         height: "50dp",
         font: {
@@ -78,11 +83,11 @@ function Controller() {
         },
         left: "10dp",
         title: "Did It!",
-        id: "__alloyId0"
+        id: "__alloyId6"
     });
-    $.__views.actionsView.add($.__views.__alloyId0);
-    onDidItClicked ? $.__views.__alloyId0.addEventListener("click", onDidItClicked) : __defers["$.__views.__alloyId0!click!onDidItClicked"] = true;
-    $.__views.__alloyId1 = Ti.UI.createButton({
+    $.__views.actionsView.add($.__views.__alloyId6);
+    onDidItClicked ? $.__views.__alloyId6.addEventListener("click", onDidItClicked) : __defers["$.__views.__alloyId6!click!onDidItClicked"] = true;
+    $.__views.__alloyId7 = Ti.UI.createButton({
         width: "150dp",
         height: "50dp",
         font: {
@@ -90,16 +95,16 @@ function Controller() {
         },
         right: "10dp",
         title: "Later",
-        id: "__alloyId1"
+        id: "__alloyId7"
     });
-    $.__views.actionsView.add($.__views.__alloyId1);
-    onLaterClicked ? $.__views.__alloyId1.addEventListener("click", onLaterClicked) : __defers["$.__views.__alloyId1!click!onLaterClicked"] = true;
+    $.__views.actionsView.add($.__views.__alloyId7);
+    onLaterClicked ? $.__views.__alloyId7.addEventListener("click", onLaterClicked) : __defers["$.__views.__alloyId7!click!onLaterClicked"] = true;
     exports.destroy = function() {};
     _.extend($, $.__views);
     args = arguments[0] || {};
     console.log(Ti.API.info(args));
-    __defers["$.__views.__alloyId0!click!onDidItClicked"] && $.__views.__alloyId0.addEventListener("click", onDidItClicked);
-    __defers["$.__views.__alloyId1!click!onLaterClicked"] && $.__views.__alloyId1.addEventListener("click", onLaterClicked);
+    __defers["$.__views.__alloyId6!click!onDidItClicked"] && $.__views.__alloyId6.addEventListener("click", onDidItClicked);
+    __defers["$.__views.__alloyId7!click!onLaterClicked"] && $.__views.__alloyId7.addEventListener("click", onLaterClicked);
     _.extend($, exports);
 }
 

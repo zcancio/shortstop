@@ -29,9 +29,4 @@ dependencies: \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiBuffer.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiBlob.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/LayoutConstraint.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiGradient.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiUIiOSAdViewProxy.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiUIViewProxy.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiViewProxy.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiRect.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiViewTemplate.h
+  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiGradient.h

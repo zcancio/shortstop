@@ -29,7 +29,6 @@ dependencies: \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiStylesheet.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/KrollBridge.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiModule.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/XHRBridge.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiRootViewController.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiControllerProtocols.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiViewProxy.h \
@@ -41,26 +40,9 @@ dependencies: \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiGradient.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiRect.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiViewTemplate.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiUIiPhoneAnimationStyleProxy.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiUIiPhoneStatusBarProxy.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiUIiPhoneRowAnimationStyleProxy.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiUIiPhoneSystemButtonStyleProxy.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiUIiPhoneSystemButtonProxy.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiUIiPhoneProgressBarStyleProxy.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiUIiPhoneActivityIndicatorStyleProxy.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiUIiPhoneSystemIconProxy.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiUIiPhoneScrollIndicatorStyleProxy.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiUIiPhoneTableViewStyleProxy.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiUIiPhoneTableViewSeparatorStyleProxy.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiUIiPhoneTableViewScrollPositionProxy.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiUIiPhoneTableViewCellSelectionStyleProxy.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiUIiPhoneNavigationGroupProxy.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiWindowProxy.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiTab.h \
   /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiTabGroup.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiViewController.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiUIiPadProxy.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiUIiPadPopoverProxy.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiUIiPadSplitWindowProxy.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiUIiOSDocumentViewerProxy.h \
-  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiUIiPhoneAlertDialogStyleProxy.h
+  /Users/trung/dev/ShortStop/Titanium/build/iphone/Classes/TiViewController.h
