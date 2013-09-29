@@ -4,14 +4,13 @@ var center = null;
 var map = null;
 var markers = [];
 
-// var foodMarkerimage = new google.maps.MarkerImage('images/marker.png',
-// 	// This marker is 129 pixels wide by 42 pixels tall.
-// 	new google.maps.Size(129, 42),
-// 	// The origin for this image is 0,0.
-// 	new google.maps.Point(0,0),
-// 	// The anchor for this image is the base of the flagpole at 18,42.
-// 	new google.maps.Point(18, 42)
-// );
+
+var foodMarkerimage = {
+  url: '/static/img/food-mark.png',
+  size: new google.maps.Size(60, 75),
+  origin: new google.maps.Point(0, 0),
+  anchor: new google.maps.Point(60, 30),
+};
 
 function initApp() {
 
@@ -101,22 +100,42 @@ function refreshMarkers(venues){
 
 		var marker = new google.maps.Marker({
 			position: new google.maps.LatLng(venue['location']['lat'],venue['location']['lng']),
-			map: map
+			map: map,
+			icon: foodMarkerimage
 			// icon: image // This path is the custom pin to be shown. Remove this line and the proceeding comma to use default pin
 		});
 
+
+
 		markers.push(marker);
 
+		showVenueOverlay(marker, venue, i);
+
 	}
+}
+
+
+// The five markers show a secret message when clicked
+// but that message is not within the marker's instance data.
+function showVenueOverlay(marker, venue, number) {
+  
+
+  	google.maps.event.addListener(marker, 'click', function() {
+  		console.log(venue);
+
+  		$('.venue h2').text(venue['name']);
+
+  		window.location.hash = "#overlay";
+
+  	});
+}
 	
 	//http://www.evoluted.net/thinktank/web-development/google-maps-api-v3-custom-location-pins
 
 
 
 	// Add listener for a click on the pin
-	// google.maps.event.addListener(marker1, 'click', function() {
-	// 	infowindow1.open(map, marker1);
-	// });
+
 
 	// Add information window
 	// var infowindow1 = new google.maps.InfoWindow({
@@ -138,4 +157,3 @@ function refreshMarkers(venues){
 
 
 
-}
