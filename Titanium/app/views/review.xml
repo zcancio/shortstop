@@ -20,22 +20,22 @@
 					<ImageView id="mainImageView" height="150dp"></ImageView>
 					<View layout="horizontal"
 							height="60dp">
-						<Button 
-							backgroundImage="photo-icon.png"
-							onClick="onTakeImageClicked"
-							width="60dp"
-							height="60dp"
-							left="80dp"
-							right="20dp"
-							></Button>
-						<Button 
-							backgroundImage="image-icon.png"
-							onClick="onPickImageClicked"
-							width="60dp"
-							height="60dp"
-							left="20dp"
-							right="80dp"
-							></Button>
+						<View width="50%">
+							<Button 
+								backgroundImage="/photo-icon.png"
+								onClick="onTakeImageClicked"
+								width="60dp"
+								height="60dp"
+								></Button>
+						</View>
+						<View width="50%">
+							<Button 
+								backgroundImage="/image-icon.png"
+								onClick="onPickImageClicked"
+								width="60dp"
+								height="60dp"
+								></Button>
+						</View>
 					</View>
 				</View>
 				<View class="DividerElement"></View>
@@ -52,6 +52,19 @@
 						title="Submit"
 						onClick="onSubmitClicked"
 						top="5dp"
+						></Button>
+				</View>
+				<View class="DividerElement"></View>
+				<View class="GeneralElement" 
+					layout="horizontal"
+					height="50dp">
+					<Button 
+						id="shareButtons"
+						backgroundImage="/final-green-button.png"
+						width="276dp"
+						height="42dp"
+						top="4dp"
+						visible="false"
 						></Button>
 				</View>
 			</View>

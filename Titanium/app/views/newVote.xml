@@ -72,7 +72,7 @@
 		<View class="GeneralElement"
 			height="50dp">
 		<Button
-			backgroundImage="count-it-button.png"
+			backgroundImage="/count-it-button.png"
 			id="voteButton"
 			enabled="false"
 			width="276dp"

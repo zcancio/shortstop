@@ -39,6 +39,7 @@ function submitWithInfo(imageUrl, comment) {
 	     onload : function(e) {
 	        Ti.API.info("Received text: " + this.responseText);
 	        alert('thank you, review received');
+	        $.shareButtons.visible = true;
 	     },
 	     // function called when an error occurs, including a timeout
 	     onerror : function(e) {

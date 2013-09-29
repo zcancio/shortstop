@@ -468,7 +468,7 @@ function Controller() {
         font: {
             fontSize: "16dp"
         },
-        backgroundImage: "count-it-button.png",
+        backgroundImage: "/count-it-button.png",
         id: "voteButton",
         enabled: "false",
         top: "4dp"

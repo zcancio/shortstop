@@ -11,6 +11,7 @@ function Controller() {
             onload: function() {
                 Ti.API.info("Received text: " + this.responseText);
                 alert("thank you, review received");
+                $.shareButtons.visible = true;
             },
             onerror: function(e) {
                 Ti.API.debug(e.error);
@@ -191,45 +192,51 @@ function Controller() {
         id: "__alloyId39"
     });
     $.__views.__alloyId38.add($.__views.__alloyId39);
-    $.__views.__alloyId40 = Ti.UI.createButton({
-        width: "60dp",
-        height: "60dp",
-        font: {
-            fontSize: "16dp"
-        },
-        backgroundImage: "photo-icon.png",
-        left: "80dp",
-        right: "20dp",
+    $.__views.__alloyId40 = Ti.UI.createView({
+        width: "50%",
         id: "__alloyId40"
     });
     $.__views.__alloyId39.add($.__views.__alloyId40);
-    onTakeImageClicked ? $.__views.__alloyId40.addEventListener("click", onTakeImageClicked) : __defers["$.__views.__alloyId40!click!onTakeImageClicked"] = true;
     $.__views.__alloyId41 = Ti.UI.createButton({
         width: "60dp",
         height: "60dp",
         font: {
             fontSize: "16dp"
         },
-        backgroundImage: "image-icon.png",
-        left: "20dp",
-        right: "80dp",
+        backgroundImage: "/photo-icon.png",
         id: "__alloyId41"
     });
-    $.__views.__alloyId39.add($.__views.__alloyId41);
-    onPickImageClicked ? $.__views.__alloyId41.addEventListener("click", onPickImageClicked) : __defers["$.__views.__alloyId41!click!onPickImageClicked"] = true;
+    $.__views.__alloyId40.add($.__views.__alloyId41);
+    onTakeImageClicked ? $.__views.__alloyId41.addEventListener("click", onTakeImageClicked) : __defers["$.__views.__alloyId41!click!onTakeImageClicked"] = true;
     $.__views.__alloyId42 = Ti.UI.createView({
-        backgroundImage: "divider.png",
-        height: "2dp",
+        width: "50%",
         id: "__alloyId42"
     });
-    $.__views.__alloyId32.add($.__views.__alloyId42);
-    $.__views.__alloyId43 = Ti.UI.createView({
+    $.__views.__alloyId39.add($.__views.__alloyId42);
+    $.__views.__alloyId43 = Ti.UI.createButton({
+        width: "60dp",
+        height: "60dp",
+        font: {
+            fontSize: "16dp"
+        },
+        backgroundImage: "/image-icon.png",
+        id: "__alloyId43"
+    });
+    $.__views.__alloyId42.add($.__views.__alloyId43);
+    onPickImageClicked ? $.__views.__alloyId43.addEventListener("click", onPickImageClicked) : __defers["$.__views.__alloyId43!click!onPickImageClicked"] = true;
+    $.__views.__alloyId44 = Ti.UI.createView({
+        backgroundImage: "divider.png",
+        height: "2dp",
+        id: "__alloyId44"
+    });
+    $.__views.__alloyId32.add($.__views.__alloyId44);
+    $.__views.__alloyId45 = Ti.UI.createView({
         backgroundColor: "#f8f8f8",
         layout: "vertical",
         height: "60dp",
-        id: "__alloyId43"
+        id: "__alloyId45"
     });
-    $.__views.__alloyId32.add($.__views.__alloyId43);
+    $.__views.__alloyId32.add($.__views.__alloyId45);
     $.__views.commentTextArea = Ti.UI.createTextArea({
         id: "commentTextArea",
         borderWidth: "1",
@@ -242,21 +249,21 @@ function Controller() {
         height: "50dp",
         top: "5dp"
     });
-    $.__views.__alloyId43.add($.__views.commentTextArea);
-    $.__views.__alloyId44 = Ti.UI.createView({
+    $.__views.__alloyId45.add($.__views.commentTextArea);
+    $.__views.__alloyId46 = Ti.UI.createView({
         backgroundImage: "divider.png",
         height: "2dp",
-        id: "__alloyId44"
+        id: "__alloyId46"
     });
-    $.__views.__alloyId32.add($.__views.__alloyId44);
-    $.__views.__alloyId45 = Ti.UI.createView({
+    $.__views.__alloyId32.add($.__views.__alloyId46);
+    $.__views.__alloyId47 = Ti.UI.createView({
         backgroundColor: "#f8f8f8",
         layout: "vertical",
         height: "40dp",
-        id: "__alloyId45"
+        id: "__alloyId47"
     });
-    $.__views.__alloyId32.add($.__views.__alloyId45);
-    $.__views.__alloyId46 = Ti.UI.createButton({
+    $.__views.__alloyId32.add($.__views.__alloyId47);
+    $.__views.__alloyId48 = Ti.UI.createButton({
         width: Ti.UI.SIZE,
         height: Ti.UI.SIZE,
         font: {
@@ -264,10 +271,35 @@ function Controller() {
         },
         title: "Submit",
         top: "5dp",
-        id: "__alloyId46"
+        id: "__alloyId48"
     });
-    $.__views.__alloyId45.add($.__views.__alloyId46);
-    onSubmitClicked ? $.__views.__alloyId46.addEventListener("click", onSubmitClicked) : __defers["$.__views.__alloyId46!click!onSubmitClicked"] = true;
+    $.__views.__alloyId47.add($.__views.__alloyId48);
+    onSubmitClicked ? $.__views.__alloyId48.addEventListener("click", onSubmitClicked) : __defers["$.__views.__alloyId48!click!onSubmitClicked"] = true;
+    $.__views.__alloyId49 = Ti.UI.createView({
+        backgroundImage: "divider.png",
+        height: "2dp",
+        id: "__alloyId49"
+    });
+    $.__views.__alloyId32.add($.__views.__alloyId49);
+    $.__views.__alloyId50 = Ti.UI.createView({
+        backgroundColor: "#f8f8f8",
+        layout: "horizontal",
+        height: "50dp",
+        id: "__alloyId50"
+    });
+    $.__views.__alloyId32.add($.__views.__alloyId50);
+    $.__views.shareButtons = Ti.UI.createButton({
+        width: "276dp",
+        height: "42dp",
+        font: {
+            fontSize: "16dp"
+        },
+        id: "shareButtons",
+        backgroundImage: "/final-green-button.png",
+        top: "4dp",
+        visible: "false"
+    });
+    $.__views.__alloyId50.add($.__views.shareButtons);
     exports.destroy = function() {};
     _.extend($, $.__views);
     args = arguments[0] || {};
@@ -290,9 +322,9 @@ function Controller() {
     };
     var popoverView, arrowDirection, imageView, selectedImage;
     imageView = $.mainImageView;
-    __defers["$.__views.__alloyId40!click!onTakeImageClicked"] && $.__views.__alloyId40.addEventListener("click", onTakeImageClicked);
-    __defers["$.__views.__alloyId41!click!onPickImageClicked"] && $.__views.__alloyId41.addEventListener("click", onPickImageClicked);
-    __defers["$.__views.__alloyId46!click!onSubmitClicked"] && $.__views.__alloyId46.addEventListener("click", onSubmitClicked);
+    __defers["$.__views.__alloyId41!click!onTakeImageClicked"] && $.__views.__alloyId41.addEventListener("click", onTakeImageClicked);
+    __defers["$.__views.__alloyId43!click!onPickImageClicked"] && $.__views.__alloyId43.addEventListener("click", onPickImageClicked);
+    __defers["$.__views.__alloyId48!click!onSubmitClicked"] && $.__views.__alloyId48.addEventListener("click", onSubmitClicked);
     _.extend($, exports);
 }
 
