@@ -94,7 +94,7 @@ function initMap(lat,lng){
 
 
 	map = new google.maps.Map(document.getElementById('map'), {
-		zoom: 20,
+		zoom: 18,
 		disableDefaultUI: true,
 		scrollwheel: false,
 		center: center,
