@@ -8,45 +8,55 @@
             		top="10" width="200dp" height="50dp" />
         <Button id="viewToDoLaterButton" onClick="viewToDoLaterClicked" title="Your List"
             		top="10" width="200dp" height="50dp" /> -->
-         <View class="GeneralElement" height="60dp">
-                	<Label>Vote for you favorite</Label>
-                </View>
-                <View class="DividerElement"></View>
-                <View class="GeneralElement" height="60dp">   
-		         	<Button class="GeneralElement" onClick="voteClicked" title="Vote"
-		            		width="200dp" height="50dp" />
-		        </View>
-		        <View class="DividerElement"></View>
-		        <View class="GeneralElement" height="60dp">
-		         	<Label class="GeneralElement">Search</Label>
-		        </View>
-		        <View class="DividerElement"></View>
-		        <View class="GeneralElement" height="60dp">
-		         	<Button class="GeneralElement" onClick="searchClicked" title="Search"
-		         	width="200dp" height="50dp"></Button>
-		         </View>
+         <View backgroundColor="#ffffff"
+    		width="80%" 
+    		height="40%"
+    		top="5%"
+    		layout="vertical">
+            	<Label
+	         		top="10%">Vote</Label>
+	            <Button onClick="voteClicked" 
+	         		backgroundImage="/vote-btn.png"
+	         	width="206dp" height="107dp"></Button>
+        </View>
+        <View backgroundColor="#ffffff"
+        	width="80%"
+        	height="40%"
+        	top="5%"
+        	layout="vertical">
+	         	<Label
+	         		top="10%">Search</Label>
+	         	<Button onClick="searchClicked" 
+	         		backgroundImage="/search-btn.png"
+	         	width="206dp" height="107dp"></Button>
+         </View>
 	</Window>
 	
     <!-- iOS Window -->
 	<Window id="index" class="GeneralElement" platform="ios">
         <NavigationGroup id="nav">
             <Window id="win1" title="ShortStop">
-            	<View class="GeneralElement" height="60dp">
-                	<Label>Vote for you favorite</Label>
-                </View>
-                <View class="DividerElement"></View>
-                <View class="GeneralElement" height="60dp">   
-		         	<Button class="GeneralElement" onClick="voteClicked" title="Vote"
-		            		width="200dp" height="50dp" />
+            	<View backgroundColor="#ffffff"
+            		width="80%" 
+            		height="40%"
+            		top="5%"
+            		layout="vertical">
+	                	<Label
+			         		top="10%">Vote</Label>
+			            <Button onClick="voteClicked" 
+			         		backgroundImage="/vote-btn.png"
+			         	width="206dp" height="107dp"></Button>
 		        </View>
-		        <View class="DividerElement"></View>
-		        <View class="GeneralElement" height="60dp">
-		         	<Label class="GeneralElement">Search</Label>
-		        </View>
-		        <View class="DividerElement"></View>
-		        <View class="GeneralElement" height="60dp">
-		         	<Button class="GeneralElement" onClick="searchClicked" title="Search"
-		         	width="200dp" height="50dp"></Button>
+		        <View backgroundColor="#ffffff"
+		        	width="80%"
+		        	height="40%"
+		        	top="5%"
+		        	layout="vertical">
+			         	<Label
+			         		top="10%">Search</Label>
+			         	<Button onClick="searchClicked" 
+			         		backgroundImage="/search-btn.png"
+			         	width="206dp" height="107dp"></Button>
 		         </View>
             </Window>
         </NavigationGroup>

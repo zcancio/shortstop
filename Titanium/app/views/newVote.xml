@@ -1,61 +1,84 @@
 <Alloy>
-	<Window id="voteWindow" 
+	<Window class="GeneralWindow" id="voteWindow" 
 		title="New Vote" 
 		layout="vertical" 
-		backgroundColor="white"
-		onOpen="setAndroidActionBar">
-		<Label>Find Venue</Label>
-		<!-- <TextField id="venueTextField"></TextField>> -->
-		<Button title="Pick Venue"
-			id="pickVenueButton"
-			onClick="pickVenueClicked" platform="ios"></Button>
-		<View
-			id="pickVenueView"
-			platform="android"
-			width="Ti.UI.SIZE"
-			height="Ti.UI.SIZE"></View>
-		<Label id="venueLabel" platform="ios">Not selected</Label>
-		<!-- <TextField id="textField" borderStyle="Ti.UI.INPUT_BORDERSTYLE_ROUNDED" color="#336699" top="10" left="10" width="250" height="60" /> -->
-		<View width="Ti.UI.FILL" height="40dp" layout="horizontal">
-			<View id="foodView" width="33%">
-				<Button title="Food" 
-					id="foodButton"
-					onClick="foodClicked"
-					enabled="false"
-					width="100dp"></Button>
-			</View>
-			<View id="drinkView" width="33%">
-				<Button title="Drink"
-					id="drinkButton" 
-					onClick="drinkClicked"
-					enabled="false"
-					width="100dp"></Button>
-			</View>
-			<View id="funView" width="33%">
-				<Button title="Fun" 
-					id="funButton"
-					onClick="funClicked"
-					enabled="false"
-					width="100dp"></Button>
+		backgroundColor="white">
+		
+		<View class="GeneralElement"
+			height="100dp">
+			<Label
+				top="5dp">Find Venue</Label>
+			<!-- <TextField id="venueTextField"></TextField>> -->
+			<Button title="Pick Venue"
+				id="pickVenueButton"
+				onClick="pickVenueClicked" platform="ios"></Button>
+			<View
+				id="pickVenueView"
+				platform="android"
+				width="Ti.UI.SIZE"
+				height="Ti.UI.SIZE"></View>
+			<Label id="venueLabel" platform="ios">Not selected</Label>
+		</View>
+		<View class="DividerElement"></View>
+		<View class="GeneralElement"
+			height="50dp">
+			<View width="Ti.UI.FILL" top="5dp" height="40dp" layout="horizontal">
+				<View id="foodView" width="33%">
+					<Button 
+						backgroundImage="/food-button.png" 
+						id="foodButton"
+						onClick="foodClicked"
+						enabled="false"
+						width="80dp"
+						height="37dp"></Button>
+				</View>
+				<View id="drinkView" width="33%">
+					<Button
+						backgroundImage="/drink-button.png"
+						id="drinkButton" 
+						onClick="drinkClicked"
+						enabled="false"
+						width="80dp"
+						height="37dp"></Button>
+				</View>
+				<View id="funView" width="33%">
+					<Button
+						backgroundImage="/fun-button.png" 
+						id="funButton"
+						onClick="funClicked"
+						enabled="false"
+						width="80dp"
+						height="37dp"></Button>
+				</View>
 			</View>
 		</View>
-		<Label>Select Thing</Label>
-		<Button title="Pick Thing"
-			id="pickThingButton"
-			enabled="false"
-			onClick="pickThingClicked"
-			platform="ios"></Button>
-		<View
-			id="pickThingView"
-			platform="android"
-			width="Ti.UI.SIZE"
-			height="Ti.UI.SIZE"></View>
-		<Label id="thingLabel" platform="ios">Not selected</Label>
+		<View class="DividerElement"></View>
+		<View class="GeneralElement" height="100dp">
+			<Label>Select Thing</Label>
+			<Button title="Pick Thing"
+				id="pickThingButton"
+				enabled="false"
+				onClick="pickThingClicked"
+				platform="ios"></Button>
+			<View
+				id="pickThingView"
+				platform="android"
+				width="Ti.UI.SIZE"
+				height="Ti.UI.SIZE"></View>
+			<Label id="thingLabel" platform="ios">Not selected</Label>
+		</View>
 		<!-- <TextField id="thingTextField"></TextField> -->
-		<Button title="Count It!!!"
+		<View class="DividerElement"></View>
+		<View class="GeneralElement"
+			height="50dp">
+		<Button
+			backgroundImage="count-it-button.png"
 			id="voteButton"
 			enabled="false"
+			width="276dp"
+			height="42dp"
+			top="4dp"
 			onClick="voteClicked"></Button>
-		
+		</View>
 	</Window>
 </Alloy>

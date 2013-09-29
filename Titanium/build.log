@@ -7,7 +7,7 @@ Logfile initialized
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
 [DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.017705 seconds on emulator to get ready
+[DEBUG] waited 0.021087 seconds on emulator to get ready
 [DEBUG] com.ashortstop installed? False
 [INFO] Copying CommonJS modules...
 [INFO] Copying project resources..
@@ -38,7 +38,7 @@ Logfile initialized
 [TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/underscore.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/underscore.js
 [TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy/widget.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/widget.js
 [TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/alloy.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy.js
-[TRACE] COPYING CREATED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/android/alloy/CFG.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/CFG.js
+[TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/android/alloy/CFG.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/alloy/CFG.js
 [TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/app.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/app.js
 [TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/date.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/date.js
 [TRACE] COPYING MODIFIED FILE: /Users/trung/dev/ShortStop/Titanium/Resources/sha-aws.js => /Users/trung/dev/ShortStop/Titanium/build/android/bin/assets/Resources/sha-aws.js
@@ -114,15 +114,21 @@ Logfile initialized
 [DEBUG] from resource zip => assets/Resources/appicon.png
 [DEBUG] from resource zip => assets/Resources/appicon_1.png
 [DEBUG] from resource zip => assets/Resources/bg.png
+[DEBUG] from resource zip => assets/Resources/count-it-button.png
 [DEBUG] from resource zip => assets/Resources/date.js
 [DEBUG] from resource zip => assets/Resources/default.png
 [DEBUG] from resource zip => assets/Resources/divider.png
+[DEBUG] from resource zip => assets/Resources/drink-button.png
+[DEBUG] from resource zip => assets/Resources/food-button.png
+[DEBUG] from resource zip => assets/Resources/fun-button.png
 [DEBUG] from resource zip => assets/Resources/image-icon.png
 [DEBUG] from resource zip => assets/Resources/loading-screen.png
 [DEBUG] from resource zip => assets/Resources/pencil-icon.png
 [DEBUG] from resource zip => assets/Resources/photo-icon.png
+[DEBUG] from resource zip => assets/Resources/search-btn.png
 [DEBUG] from resource zip => assets/Resources/sha-aws.js
 [DEBUG] from resource zip => assets/Resources/utf8.js
+[DEBUG] from resource zip => assets/Resources/vote-btn.png
 [DEBUG] from resource zip => assets/Resources/xpng.js
 [DEBUG] from resource zip => assets/app.json
 [DEBUG] from resource zip => assets/index.json
@@ -173,6 +179,6 @@ Logfile initialized
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
 [DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.015293 seconds on emulator to get ready
+[DEBUG] waited 0.015247 seconds on emulator to get ready
 [INFO] Installing application on device
 [INFO] Application installed. Launch from drawer on Home Screen

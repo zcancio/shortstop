@@ -1,13 +1,6 @@
 function Controller() {
     function mapClicked(evt) {
         Ti.API.info("Annotation " + evt.title + " clicked, id: " + evt.annotation.myid + "evt " + evt.clicksource);
-        if ("rightButton" == evt.clicksource) {
-            Ti.API.info("Annotation " + evt.title + ", right button clicked.");
-            var xpng = require("xpng");
-            xpng.openWin(Alloy.CFG.nav, "location", {
-                myprop: "value"
-            });
-        }
         ("leftButton" == evt.clicksource || "leftPane" == evt.clicksource || "leftView" == evt.clicksource) && Ti.API.info("Annotation " + evt.title + ", left button clicked.");
     }
     function setRegion() {}
@@ -50,9 +43,9 @@ function Controller() {
         title: "Map"
     });
     $.__views.mapWindow && $.addTopLevelView($.__views.mapWindow);
-    var __alloyId30 = [];
+    var __alloyId20 = [];
     $.__views.mapview = Ti.Map.createView({
-        annotations: __alloyId30,
+        annotations: __alloyId20,
         id: "mapview",
         ns: Ti.Map,
         animate: "true",

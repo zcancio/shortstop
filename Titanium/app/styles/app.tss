@@ -1,7 +1,7 @@
 "Label": {
 	width: Ti.UI.SIZE,
 	height: Ti.UI.SIZE,
-	color: "#000",
+	// color: "#000",
 	font: {
 		fontSize: "20dp"	
 	}
@@ -20,7 +20,8 @@
 }
 
 ".GeneralElement": {
-	backgroundColor: "#f8f8f8"
+	backgroundColor: "#f8f8f8",
+	layout: "vertical"
 }
 
 ".DividerElement": {

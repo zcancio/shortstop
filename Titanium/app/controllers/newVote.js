@@ -15,15 +15,15 @@ var my_location = Titanium.Geolocation.getCurrentPosition(function(e) {
 			current_latitude = e.coords.latitude;
 	   });
 	   
-function setAndroidActionBar(event) {
-	if (OS_ANDROID) {
-		ABH=require('actionbarhelper').actionBarHelper;
-		actionBarHelper = new ABH($.voteWindow);
-		actionBarHelper.setUpAction(function (event) {
-			$.voteWindow.close();
-		});
-	}
-} 
+// function setAndroidActionBar(event) {
+	// if (OS_ANDROID) {
+		// ABH=require('actionbarhelper').actionBarHelper;
+		// actionBarHelper = new ABH($.voteWindow);
+		// actionBarHelper.setUpAction(function (event) {
+			// $.voteWindow.close();
+		// });
+	// }
+// } 
 	  
 function getDataForAndroidPicker() {
 	var url = "http://www.ashortstop.com/venues/search?lat="+ current_latitude + "&" + current_longitude;
@@ -334,7 +334,11 @@ function foodClicked(event) {
 	if (OS_IOS) {
 		$.pickThingButton.enabled = true; 
 	}
-	getDataForAndroidThingPicker();
+	if (OS_IOS) {
+		$.pickThingButton.enabled = true; 
+	} else {
+		getDataForAndroidThingPicker();
+	}
 }
 
 function drinkClicked(event) {
@@ -344,7 +348,11 @@ function drinkClicked(event) {
 	if (OS_IOS) {
 		$.pickThingButton.enabled = true; 
 	}
-	getDataForAndroidThingPicker();
+	if (OS_IOS) {
+		$.pickThingButton.enabled = true; 
+	} else {
+		getDataForAndroidThingPicker();
+	}
 }
 
 function funClicked(event) {
@@ -353,8 +361,9 @@ function funClicked(event) {
 	$.drinkButton.enabled = false;
 	if (OS_IOS) {
 		$.pickThingButton.enabled = true; 
+	} else {
+		getDataForAndroidThingPicker();
 	}
-	getDataForAndroidThingPicker();
 }
 
 function voteClicked(event) {

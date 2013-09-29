@@ -18,108 +18,89 @@ function Controller() {
     $.__views.index = Ti.UI.createWindow({
         backgroundColor: "white",
         layout: "vertical",
-        exitOnClose: "true",
-        navBarHidden: "false",
         id: "index"
     });
     $.__views.index && $.addTopLevelView($.__views.index);
-    $.__views.__alloyId6 = Ti.UI.createView({
-        backgroundColor: "#f8f8f8",
-        height: "60dp",
-        id: "__alloyId6"
+    $.__views.win1 = Ti.UI.createWindow({
+        layout: "vertical",
+        id: "win1",
+        title: "ShortStop"
     });
-    $.__views.index.add($.__views.__alloyId6);
-    $.__views.__alloyId7 = Ti.UI.createLabel({
-        width: Ti.UI.SIZE,
-        height: Ti.UI.SIZE,
-        color: "#000",
-        font: {
-            fontSize: "20dp"
-        },
-        text: "Vote for you favorite",
-        id: "__alloyId7"
-    });
-    $.__views.__alloyId6.add($.__views.__alloyId7);
-    $.__views.__alloyId8 = Ti.UI.createView({
-        backgroundImage: "divider.png",
-        height: "2dp",
-        id: "__alloyId8"
-    });
-    $.__views.index.add($.__views.__alloyId8);
-    $.__views.__alloyId9 = Ti.UI.createView({
-        backgroundColor: "#f8f8f8",
-        height: "60dp",
-        id: "__alloyId9"
-    });
-    $.__views.index.add($.__views.__alloyId9);
-    $.__views.__alloyId10 = Ti.UI.createButton({
-        width: "200dp",
-        height: "50dp",
-        font: {
-            fontSize: "16dp"
-        },
-        backgroundColor: "#f8f8f8",
-        title: "Vote",
-        id: "__alloyId10"
-    });
-    $.__views.__alloyId9.add($.__views.__alloyId10);
-    voteClicked ? $.__views.__alloyId10.addEventListener("click", voteClicked) : __defers["$.__views.__alloyId10!click!voteClicked"] = true;
-    $.__views.__alloyId11 = Ti.UI.createView({
-        backgroundImage: "divider.png",
-        height: "2dp",
-        id: "__alloyId11"
-    });
-    $.__views.index.add($.__views.__alloyId11);
     $.__views.__alloyId12 = Ti.UI.createView({
-        backgroundColor: "#f8f8f8",
-        height: "60dp",
+        backgroundColor: "#ffffff",
+        width: "80%",
+        height: "40%",
+        top: "5%",
+        layout: "vertical",
         id: "__alloyId12"
     });
-    $.__views.index.add($.__views.__alloyId12);
+    $.__views.win1.add($.__views.__alloyId12);
     $.__views.__alloyId13 = Ti.UI.createLabel({
         width: Ti.UI.SIZE,
         height: Ti.UI.SIZE,
-        color: "#000",
         font: {
             fontSize: "20dp"
         },
-        backgroundColor: "#f8f8f8",
-        text: "Search",
+        text: "Vote",
+        top: "10%",
         id: "__alloyId13"
     });
     $.__views.__alloyId12.add($.__views.__alloyId13);
-    $.__views.__alloyId14 = Ti.UI.createView({
-        backgroundImage: "divider.png",
-        height: "2dp",
-        id: "__alloyId14"
-    });
-    $.__views.index.add($.__views.__alloyId14);
-    $.__views.__alloyId15 = Ti.UI.createView({
-        backgroundColor: "#f8f8f8",
-        height: "60dp",
-        id: "__alloyId15"
-    });
-    $.__views.index.add($.__views.__alloyId15);
-    $.__views.__alloyId16 = Ti.UI.createButton({
-        width: "200dp",
-        height: "50dp",
+    $.__views.__alloyId14 = Ti.UI.createButton({
+        width: "206dp",
+        height: "107dp",
         font: {
             fontSize: "16dp"
         },
-        backgroundColor: "#f8f8f8",
-        title: "Search",
+        backgroundImage: "/vote-btn.png",
+        id: "__alloyId14"
+    });
+    $.__views.__alloyId12.add($.__views.__alloyId14);
+    voteClicked ? $.__views.__alloyId14.addEventListener("click", voteClicked) : __defers["$.__views.__alloyId14!click!voteClicked"] = true;
+    $.__views.__alloyId15 = Ti.UI.createView({
+        backgroundColor: "#ffffff",
+        width: "80%",
+        height: "40%",
+        top: "5%",
+        layout: "vertical",
+        id: "__alloyId15"
+    });
+    $.__views.win1.add($.__views.__alloyId15);
+    $.__views.__alloyId16 = Ti.UI.createLabel({
+        width: Ti.UI.SIZE,
+        height: Ti.UI.SIZE,
+        font: {
+            fontSize: "20dp"
+        },
+        text: "Search",
+        top: "10%",
         id: "__alloyId16"
     });
     $.__views.__alloyId15.add($.__views.__alloyId16);
-    searchClicked ? $.__views.__alloyId16.addEventListener("click", searchClicked) : __defers["$.__views.__alloyId16!click!searchClicked"] = true;
+    $.__views.__alloyId17 = Ti.UI.createButton({
+        width: "206dp",
+        height: "107dp",
+        font: {
+            fontSize: "16dp"
+        },
+        backgroundImage: "/search-btn.png",
+        id: "__alloyId17"
+    });
+    $.__views.__alloyId15.add($.__views.__alloyId17);
+    searchClicked ? $.__views.__alloyId17.addEventListener("click", searchClicked) : __defers["$.__views.__alloyId17!click!searchClicked"] = true;
+    $.__views.nav = Ti.UI.iPhone.createNavigationGroup({
+        window: $.__views.win1,
+        id: "nav"
+    });
+    $.__views.index.add($.__views.nav);
     exports.destroy = function() {};
     _.extend($, $.__views);
     Alloy.CFG.nav = $.nav;
     $.index.open();
-    __defers["$.__views.__alloyId10!click!voteClicked"] && $.__views.__alloyId10.addEventListener("click", voteClicked);
-    __defers["$.__views.__alloyId16!click!searchClicked"] && $.__views.__alloyId16.addEventListener("click", searchClicked);
-    __defers["$.__views.__alloyId21!click!voteClicked"] && $.__views.__alloyId21.addEventListener("click", voteClicked);
-    __defers["$.__views.__alloyId27!click!searchClicked"] && $.__views.__alloyId27.addEventListener("click", searchClicked);
+    __defers["$.__views.__alloyId8!click!voteClicked"] && $.__views.__alloyId8.addEventListener("click", voteClicked);
+    __defers["$.__views.__alloyId11!click!searchClicked"] && $.__views.__alloyId11.addEventListener("click", searchClicked);
+    __defers["$.__views.__alloyId14!click!voteClicked"] && $.__views.__alloyId14.addEventListener("click", voteClicked);
+    __defers["$.__views.__alloyId17!click!searchClicked"] && $.__views.__alloyId17.addEventListener("click", searchClicked);
     _.extend($, exports);
 }
 

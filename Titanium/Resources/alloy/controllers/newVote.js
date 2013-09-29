@@ -1,11 +1,4 @@
 function Controller() {
-    function setAndroidActionBar() {
-        ABH = require("actionbarhelper").actionBarHelper;
-        actionBarHelper = new ABH($.voteWindow);
-        actionBarHelper.setUpAction(function() {
-            $.voteWindow.close();
-        });
-    }
     function getDataForAndroidPicker() {
         var url = "http://www.ashortstop.com/venues/search?lat=" + current_latitude + "&" + current_longitude;
         var client = Ti.Network.createHTTPClient({
@@ -246,19 +239,21 @@ function Controller() {
         selectedCategory = "food";
         $.drinkButton.enabled = false;
         $.funButton.enabled = false;
-        getDataForAndroidThingPicker();
+        $.pickThingButton.enabled = true;
+        $.pickThingButton.enabled = true;
     }
     function drinkClicked() {
         selectedCategory = "drink";
         $.foodButton.enabled = false;
         $.funButton.enabled = false;
-        getDataForAndroidThingPicker();
+        $.pickThingButton.enabled = true;
+        $.pickThingButton.enabled = true;
     }
     function funClicked() {
         selectedCategory = "fun";
         $.foodButton.enabled = false;
         $.drinkButton.enabled = false;
-        getDataForAndroidThingPicker();
+        $.pickThingButton.enabled = true;
     }
     function voteClicked() {
         var url = "http://www.ashortstop.com/things/" + selectedThing.id + "/votes";
@@ -291,49 +286,85 @@ function Controller() {
     var exports = {};
     var __defers = {};
     $.__views.voteWindow = Ti.UI.createWindow({
+        backgroundImage: "bg.png",
         id: "voteWindow",
         title: "New Vote",
         layout: "vertical",
         backgroundColor: "white"
     });
     $.__views.voteWindow && $.addTopLevelView($.__views.voteWindow);
-    setAndroidActionBar ? $.__views.voteWindow.addEventListener("open", setAndroidActionBar) : __defers["$.__views.voteWindow!open!setAndroidActionBar"] = true;
-    $.__views.__alloyId31 = Ti.UI.createLabel({
+    $.__views.__alloyId21 = Ti.UI.createView({
+        backgroundColor: "#f8f8f8",
+        layout: "vertical",
+        height: "100dp",
+        id: "__alloyId21"
+    });
+    $.__views.voteWindow.add($.__views.__alloyId21);
+    $.__views.__alloyId22 = Ti.UI.createLabel({
         width: Ti.UI.SIZE,
         height: Ti.UI.SIZE,
-        color: "#000",
         font: {
             fontSize: "20dp"
         },
         text: "Find Venue",
-        id: "__alloyId31"
+        top: "5dp",
+        id: "__alloyId22"
     });
-    $.__views.voteWindow.add($.__views.__alloyId31);
-    $.__views.pickVenueView = Ti.UI.createView({
-        id: "pickVenueView",
+    $.__views.__alloyId21.add($.__views.__alloyId22);
+    $.__views.pickVenueButton = Ti.UI.createButton({
         width: Ti.UI.SIZE,
-        height: Ti.UI.SIZE
-    });
-    $.__views.voteWindow.add($.__views.pickVenueView);
-    $.__views.__alloyId32 = Ti.UI.createView({
-        width: Ti.UI.FILL,
-        height: "40dp",
-        layout: "horizontal",
-        id: "__alloyId32"
-    });
-    $.__views.voteWindow.add($.__views.__alloyId32);
-    $.__views.foodView = Ti.UI.createView({
-        id: "foodView",
-        width: "33%"
-    });
-    $.__views.__alloyId32.add($.__views.foodView);
-    $.__views.foodButton = Ti.UI.createButton({
-        width: "100dp",
         height: Ti.UI.SIZE,
         font: {
             fontSize: "16dp"
         },
-        title: "Food",
+        title: "Pick Venue",
+        id: "pickVenueButton"
+    });
+    $.__views.__alloyId21.add($.__views.pickVenueButton);
+    pickVenueClicked ? $.__views.pickVenueButton.addEventListener("click", pickVenueClicked) : __defers["$.__views.pickVenueButton!click!pickVenueClicked"] = true;
+    $.__views.venueLabel = Ti.UI.createLabel({
+        width: Ti.UI.SIZE,
+        height: Ti.UI.SIZE,
+        font: {
+            fontSize: "20dp"
+        },
+        text: "Not selected",
+        id: "venueLabel"
+    });
+    $.__views.__alloyId21.add($.__views.venueLabel);
+    $.__views.__alloyId23 = Ti.UI.createView({
+        backgroundImage: "divider.png",
+        height: "2dp",
+        id: "__alloyId23"
+    });
+    $.__views.voteWindow.add($.__views.__alloyId23);
+    $.__views.__alloyId24 = Ti.UI.createView({
+        backgroundColor: "#f8f8f8",
+        layout: "vertical",
+        height: "50dp",
+        id: "__alloyId24"
+    });
+    $.__views.voteWindow.add($.__views.__alloyId24);
+    $.__views.__alloyId25 = Ti.UI.createView({
+        width: Ti.UI.FILL,
+        top: "5dp",
+        height: "40dp",
+        layout: "horizontal",
+        id: "__alloyId25"
+    });
+    $.__views.__alloyId24.add($.__views.__alloyId25);
+    $.__views.foodView = Ti.UI.createView({
+        id: "foodView",
+        width: "33%"
+    });
+    $.__views.__alloyId25.add($.__views.foodView);
+    $.__views.foodButton = Ti.UI.createButton({
+        width: "80dp",
+        height: "37dp",
+        font: {
+            fontSize: "16dp"
+        },
+        backgroundImage: "/food-button.png",
         id: "foodButton",
         enabled: "false"
     });
@@ -343,14 +374,14 @@ function Controller() {
         id: "drinkView",
         width: "33%"
     });
-    $.__views.__alloyId32.add($.__views.drinkView);
+    $.__views.__alloyId25.add($.__views.drinkView);
     $.__views.drinkButton = Ti.UI.createButton({
-        width: "100dp",
-        height: Ti.UI.SIZE,
+        width: "80dp",
+        height: "37dp",
         font: {
             fontSize: "16dp"
         },
-        title: "Drink",
+        backgroundImage: "/drink-button.png",
         id: "drinkButton",
         enabled: "false"
     });
@@ -360,47 +391,89 @@ function Controller() {
         id: "funView",
         width: "33%"
     });
-    $.__views.__alloyId32.add($.__views.funView);
+    $.__views.__alloyId25.add($.__views.funView);
     $.__views.funButton = Ti.UI.createButton({
-        width: "100dp",
-        height: Ti.UI.SIZE,
+        width: "80dp",
+        height: "37dp",
         font: {
             fontSize: "16dp"
         },
-        title: "Fun",
+        backgroundImage: "/fun-button.png",
         id: "funButton",
         enabled: "false"
     });
     $.__views.funView.add($.__views.funButton);
     funClicked ? $.__views.funButton.addEventListener("click", funClicked) : __defers["$.__views.funButton!click!funClicked"] = true;
-    $.__views.__alloyId33 = Ti.UI.createLabel({
+    $.__views.__alloyId26 = Ti.UI.createView({
+        backgroundImage: "divider.png",
+        height: "2dp",
+        id: "__alloyId26"
+    });
+    $.__views.voteWindow.add($.__views.__alloyId26);
+    $.__views.__alloyId27 = Ti.UI.createView({
+        backgroundColor: "#f8f8f8",
+        layout: "vertical",
+        height: "100dp",
+        id: "__alloyId27"
+    });
+    $.__views.voteWindow.add($.__views.__alloyId27);
+    $.__views.__alloyId28 = Ti.UI.createLabel({
         width: Ti.UI.SIZE,
         height: Ti.UI.SIZE,
-        color: "#000",
         font: {
             fontSize: "20dp"
         },
         text: "Select Thing",
-        id: "__alloyId33"
+        id: "__alloyId28"
     });
-    $.__views.voteWindow.add($.__views.__alloyId33);
-    $.__views.pickThingView = Ti.UI.createView({
-        id: "pickThingView",
-        width: Ti.UI.SIZE,
-        height: Ti.UI.SIZE
-    });
-    $.__views.voteWindow.add($.__views.pickThingView);
-    $.__views.voteButton = Ti.UI.createButton({
+    $.__views.__alloyId27.add($.__views.__alloyId28);
+    $.__views.pickThingButton = Ti.UI.createButton({
         width: Ti.UI.SIZE,
         height: Ti.UI.SIZE,
         font: {
             fontSize: "16dp"
         },
-        title: "Count It!!!",
-        id: "voteButton",
+        title: "Pick Thing",
+        id: "pickThingButton",
         enabled: "false"
     });
-    $.__views.voteWindow.add($.__views.voteButton);
+    $.__views.__alloyId27.add($.__views.pickThingButton);
+    pickThingClicked ? $.__views.pickThingButton.addEventListener("click", pickThingClicked) : __defers["$.__views.pickThingButton!click!pickThingClicked"] = true;
+    $.__views.thingLabel = Ti.UI.createLabel({
+        width: Ti.UI.SIZE,
+        height: Ti.UI.SIZE,
+        font: {
+            fontSize: "20dp"
+        },
+        text: "Not selected",
+        id: "thingLabel"
+    });
+    $.__views.__alloyId27.add($.__views.thingLabel);
+    $.__views.__alloyId29 = Ti.UI.createView({
+        backgroundImage: "divider.png",
+        height: "2dp",
+        id: "__alloyId29"
+    });
+    $.__views.voteWindow.add($.__views.__alloyId29);
+    $.__views.__alloyId30 = Ti.UI.createView({
+        backgroundColor: "#f8f8f8",
+        layout: "vertical",
+        height: "50dp",
+        id: "__alloyId30"
+    });
+    $.__views.voteWindow.add($.__views.__alloyId30);
+    $.__views.voteButton = Ti.UI.createButton({
+        width: "276dp",
+        height: "42dp",
+        font: {
+            fontSize: "16dp"
+        },
+        backgroundImage: "count-it-button.png",
+        id: "voteButton",
+        enabled: "false",
+        top: "4dp"
+    });
+    $.__views.__alloyId30.add($.__views.voteButton);
     voteClicked ? $.__views.voteButton.addEventListener("click", voteClicked) : __defers["$.__views.voteButton!click!voteClicked"] = true;
     exports.destroy = function() {};
     _.extend($, $.__views);
@@ -419,8 +492,6 @@ function Controller() {
         current_longitude = e.coords.longitude;
         current_latitude = e.coords.latitude;
     });
-    getDataForAndroidPicker();
-    __defers["$.__views.voteWindow!open!setAndroidActionBar"] && $.__views.voteWindow.addEventListener("open", setAndroidActionBar);
     __defers["$.__views.pickVenueButton!click!pickVenueClicked"] && $.__views.pickVenueButton.addEventListener("click", pickVenueClicked);
     __defers["$.__views.foodButton!click!foodClicked"] && $.__views.foodButton.addEventListener("click", foodClicked);
     __defers["$.__views.drinkButton!click!drinkClicked"] && $.__views.drinkButton.addEventListener("click", drinkClicked);

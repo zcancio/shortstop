@@ -1,45 +1,59 @@
 <Alloy>
-	<Window id="voteWindow" title="New Vote" layout="vertical" backgroundColor="white">
+	<Window id="voteWindow" title="New Vote" 
+		layout="vertical" class="GeneralWindow">
 		<ScrollView layout="vertical"  height="100%" width="100%">
 			<View layout="vertical">
-				<Label>+1 vote</Label>
-				<Label id="thingLabel">Hackathon</Label>
-				<Label id="locationLabel">Yahoo</Label>
-				<ImageView id="mainImageView" height="150dp"></ImageView>
-				<View layout="horizontal"
-						height="60dp">
-					<Button 
-						backgroundImage="photo-icon.png"
-						onClick="onTakeImageClicked"
-						width="60dp"
-						height="60dp"
-						left="80dp"
-						right="20dp"
-						></Button>
-					<Button 
-						backgroundImage="image-icon.png"
-						onClick="onPickImageClicked"
-						width="60dp"
-						height="60dp"
-						left="20dp"
-						right="80dp"
-						></Button>
-					<!-- <Button 
-						backgroundImage="pencil-icon.png"
-						onClick="onWriteReviewClicked"
-						width="60dp"
-						height="60dp"
-						right="40dp"
-						></Button> -->
+				<View class="GeneralElement"
+					height="40dp">
+					<Label>+1 vote</Label>
 				</View>
-				<TextArea id="commentTextArea"
-		            borderWidth="1" borderColor="#bbb" borderRadius="5"
-		            color="#888" textAlign="left" value=""
-		            width="300" height="50" />
-				<Button 
-					title="Submit"
-					onClick="onSubmitClicked"
-					></Button>
+				<View class="DividerElement"></View>
+				<View class="GeneralElement"
+					height="60dp">
+					<Label id="thingLabel">Hackathon</Label>
+					<Label id="locationLabel"
+						class="boldLabel">Yahoo</Label>
+				</View>
+				<View class="DividerElement"></View>
+				<View class="GeneralElement"
+					height="210dp">
+					<ImageView id="mainImageView" height="150dp"></ImageView>
+					<View layout="horizontal"
+							height="60dp">
+						<Button 
+							backgroundImage="photo-icon.png"
+							onClick="onTakeImageClicked"
+							width="60dp"
+							height="60dp"
+							left="80dp"
+							right="20dp"
+							></Button>
+						<Button 
+							backgroundImage="image-icon.png"
+							onClick="onPickImageClicked"
+							width="60dp"
+							height="60dp"
+							left="20dp"
+							right="80dp"
+							></Button>
+					</View>
+				</View>
+				<View class="DividerElement"></View>
+				<View class="GeneralElement"
+					height="60dp">
+					<TextArea id="commentTextArea"
+			            borderWidth="1" borderColor="#bbb" borderRadius="5"
+			            color="#888" textAlign="left" value=""
+			            width="300" height="50dp" top="5dp"/>
+		        </View>
+		        <View class="DividerElement"></View>
+		        <View class="GeneralElement" height="40dp">
+					<Button 
+						title="Submit"
+						onClick="onSubmitClicked"
+						top="5dp"
+						></Button>
+				</View>
 			</View>
 		</ScrollView>
 	</Window>

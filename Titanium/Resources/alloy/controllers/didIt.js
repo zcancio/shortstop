@@ -87,7 +87,6 @@ function Controller() {
     $.__views.didItLabel = Ti.UI.createLabel({
         width: Ti.UI.SIZE,
         height: Ti.UI.SIZE,
-        color: "#000",
         font: {
             fontSize: "20dp"
         },
@@ -98,7 +97,6 @@ function Controller() {
     $.__views.__alloyId0 = Ti.UI.createLabel({
         width: Ti.UI.SIZE,
         height: Ti.UI.SIZE,
-        color: "#000",
         font: {
             fontSize: "20dp"
         },
@@ -144,7 +142,6 @@ function Controller() {
     $.__views.__alloyId4 = Ti.UI.createLabel({
         width: Ti.UI.SIZE,
         height: Ti.UI.SIZE,
-        color: "#000",
         font: {
             fontSize: "20dp"
         },
