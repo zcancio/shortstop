@@ -7,9 +7,23 @@ var markers = [];
 
 var foodMarkerimage = {
   url: '/static/img/food-mark.png',
-  size: new google.maps.Size(60, 75),
+  size: new google.maps.Size(45, 56),
   origin: new google.maps.Point(0, 0),
-  anchor: new google.maps.Point(60, 30),
+  anchor: new google.maps.Point(45, 20),
+};
+
+var drinkMarkerimage = {
+  url: '/static/img/drink-mark.png',
+  size: new google.maps.Size(45, 56),
+  origin: new google.maps.Point(0, 0),
+  anchor: new google.maps.Point(45, 20),
+};
+
+var funMarkerimage = {
+  url: '/static/img/fun-mark.png',
+  size: new google.maps.Size(45, 56),
+  origin: new google.maps.Point(0, 0),
+  anchor: new google.maps.Point(45, 20),
 };
 
 function initApp() {
@@ -103,7 +117,7 @@ function refreshMarkers(venues){
 			// position: new google.maps.LatLng(venue['location']['lat'],venue['location']['lng']),
 			position: new google.maps.LatLng(venue['lat'],venue['lng']),
 			map: map,
-			icon: foodMarkerimage
+			icon: funMarkerimage
 			// icon: image // This path is the custom pin to be shown. Remove this line and the proceeding comma to use default pin
 		});
 

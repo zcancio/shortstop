@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 
 		<title>ShortStop</title>
-		<!-- <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css"> -->
+		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
 		<link rel="stylesheet" href="{{static_url('css/app.css')}}">
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -15,41 +15,55 @@
 	</head>
 	<body>
 
-			
 		<div class="pure-menu">
 			<a href="#" class="pure-menu-heading"><img src="{{static_url('img/logo.png')}}" /></a>
 		</div>
 
 		<div id="map-container">
-	<!-- 		<div class="zoom-ui">
+			<div class="zoom-ui">
 					<div class="zoom-in">
 						<p>+</p>
 					</div>
 					<div class="zoom-out">
 						<p>–</p>
-					</div>a
-				</div> -->
+					</div>
+				</div>
 			<div id="map"></div>
 		</div>
 
-	
-
 		<div id="overlay">
 		    <a href="#" class="close">&times;</a>
+    	    <div class="category hungry">
+    	    	<h2>Food</h2>
+    	    </div>
     	    <div class="location">
     	    	<h2>My Location</h2>
     	    </div>
-    	    <div class="category">
-    	    	<h2>Food</h2>
-    	    </div>
     	    <div class="venue">
-    	    	<h2>Restaurant</h2>
+    	    	<h2>Venue</h2>
+    	    	<div class="arrow"></div>
     	    </div>
-    	    <div class="thing">
+    	    <div class="item">
     	    	<h2>Item</h2>
+    	    	<div class="arrow"></div>
     	    </div>
+    	    <div class="do-button">
+    	    	<a href="#do-it" class="pure-button green-button">Do it!</a>
+    		</div>
 		</div>
-		<div id="mask" onclick="document.location='#';"></div> 
+		<div id="mask" onclick="document.location='#';"></div>
+
+		<div id="do-it">
+			<h2>Do It!</h2>
+			<div class="do-it-content">
+				<h2>Item</h2>
+				<h2>Venue</h2>
+				<div class="pure-button">Reviews</div>
+			</div>
+			<div class="pure-button green-button-sm">I did it!</div>
+			<div class="pure-button green-button-sm">Do it Later</div>
+		</div>
+		<div id="mask" onclick="document.location='#';"></div>
 
 		<div id="button-bar">
 			<div class="buttons">
@@ -58,6 +72,10 @@
 				<a href="#"><div class="pure-button bored">I'm Bored</div></a>
 			</div>
 		</div>
+		
+
+		
+
 	</body>
 
 	<script type="text/javascript">

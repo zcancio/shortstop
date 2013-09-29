@@ -33,7 +33,6 @@
 
 	.pure-menu {
 		background:#eee;
-		border-bottom:1px #ddd solid;
 		position: fixed;
 		margin-top:0px;
 		width:100%;
@@ -49,7 +48,7 @@
 	.zoom-ui {
 
 		position: absolute;
-		top:70px;
+		top:60px;
 		left:20px;
 		width:50px;
 		height:100px;
@@ -57,6 +56,7 @@
 		border-bottom:1px #ccc solid;
 		text-align: center;
 		border-radius:4px;
+		z-index: 100;
 
 		p {
 			margin:0px;
@@ -82,6 +82,34 @@
 		}
 
 	}
+
+	.green-button {
+		background-color: #b7e42a;
+		border-bottom:1px #98bc0f solid;
+		width:70%;
+		position: relative;
+		font-size: 21px;
+		font-weight:600;
+		color:white;
+		text-shadow: 0 -1px 0 #98bc0f;
+		border-radius:4px;
+
+	}
+
+	.green-button-sm {
+		background-color: #b7e42a;
+		border-bottom:1px #98bc0f solid;
+		width:150px;
+		position: relative;
+		font-size: 21px;
+		font-weight:600;
+		color:white;
+		text-shadow: 0 -1px 0 #98bc0f;
+		border-radius:4px;
+		margin:30px 10px 10px 0px;
+
+	}
+
 
 
 	#button-bar {
@@ -167,14 +195,15 @@
 	*{margin:0;padding:0;}
 	
 	#overlay { 
-		height:80%;
 		width:80%;
 		margin:0 auto;
-		background:white;
+		background:#f5f5f5;
+		border-top:white;
+		border-bottom:1px ;
 		color:black;
-		padding:10px;
+		padding:30px 0px 20px 0px;
 		position:absolute;
-		top:5%;
+		top:100px;
 		left:10%;
 		z-index:1000;
 		display:none;
@@ -183,27 +212,161 @@
 		-moz-border-radius:10px;
 		-o-border-radius:10px;
 		border-radius:4px;
+		overflow: hidden;
+
+		h2 {
+			text-shadow: 0 1px 0 rgba(255,255,255,.25);
+		}
+
+		.arrow {
+			background:url(../img/arrow.png);
+			width: 20px;
+			height: 23px;
+			position: absolute;
+			float: right;
+			right:20px;
+			margin-top:-45px;
+			opacity: .3;
+		}
+
+		.location {
+			padding-left:20px;
+			width: 100%;
+			background: linear-gradient(to bottom, #f5f5f5 0%,#fafafa 100%);
+			border-top:1px #fff solid;
+			border-bottom:1px #eee solid;
+		}
+		.category {
+			text-align: center;
+			width: 100%;
+			background-color: #f5f5f5;
+			border-top:1px #fff solid;
+			border-bottom:1px #eee solid;
+			height:40px;
+
+			h2 {
+				padding:0px;
+				margin-top:6px;
+				color:white;
+			}
+		}
+
+		.hungry {
+				background:#f5c912;
+				border-top:1px #ffe269 solid;
+				border-bottom:1px #d3ac0b solid;
+
+				h2{
+					text-shadow: 0 -1px 0 #d3ac0b;
+				}
+		}
+
+		.sober {
+			background:#badfce;
+			border-top:1px #c7f2dc solid;
+			border-bottom:1px #8ab7a0 solid;
+
+				h2{
+					text-shadow: 0 -1px 0 #8ab7a0;
+				}
+		}
+
+		.bored {
+			background:#ee5c20;
+			border-top:1px #f98258 solid;
+			border-bottom:1px #c63806 solid;
+
+				h2{
+					text-shadow: 0 -1px 0 #c63806;
+				}
+		}
+
+		.venue {
+			padding-left:20px;
+			width: 100%;
+			background: linear-gradient(to bottom, #f5f5f5 0%,#fafafa 100%);
+			border-top:1px #fff solid;
+			border-bottom:1px #eee solid;
+		}
+		.item {
+			padding-left:20px;
+			width: 100%;
+			background: linear-gradient(to bottom, #f5f5f5 0%,#fafafa 100%);
+			border-top:1px #fff solid;
+			border-bottom:1px #eee solid;
+		}
+
+		.do-button {
+			width:70%;
+			position: relative;
+			margin:20px auto 0 auto;
+			text-align: center;
+
+		}
+
+	}
+
+	#do-it { 
+		width:85%;
+		margin:0 auto;
+		background:url(../img/sunburst.png) #fafafa;
+		background-position: center;
+		border-top:1px white solid;
+		border-bottom:1px #ddd solid;
+		color:black;
+		padding:20px 0px;
+		position:absolute;
+		top:100px;
+		left:7.5%;
+		z-index:1000;
+		display:none;
+		/* CSS 3 */
+		-webkit-border-radius:10px;
+		-moz-border-radius:10px;
+		-o-border-radius:10px;
+		border-radius:4px;
+		overflow: hidden;
+		text-align: center;
+
+		.do-it-content {
+			background:#f5f5f5;
+			width:50%;
+			margin:0 auto;
+			padding:20px;
+			position: relative;
+			box-shadow: 0 2px 4px rgba(0,0,0,.4);
+		}
+
+
 	}
 
 	#mask { 
 		position:fixed;
-		top:0;
+		top:48px;
 		left:0;
 		background:rgba(0,0,0,0.6);
 		z-index:500;
 		width:100%;
 		height:100%;
 		display:none;
+		opacity: 0;
 	}
 
 	#overlay:target, #overlay:target + #mask {
 		display:block;
 		opacity:1;
+		
+	}
+
+	#do-it:target, #do-it:target + #mask {
+		display:block;
+		opacity:1;
+		transition: opacity .25s;
 	}
 
 	.close { 
 		position:absolute;
-		top:10px;
+		top:7px;
 		right:10px;
 		text-decoration:none;
 	}
@@ -233,10 +396,12 @@
 		padding: 10px 20px 20px;
 		font-family: Arial;
 		font-size: 16px;
+        height: 100%; 
+        margin: 0px; 
+        padding: 0px;
 
-        height: 100%; margin: 0px; padding: 0px
+
 	}
-
 
 	#map-container {
 		width: 100%; 
@@ -245,6 +410,7 @@
 		// margin-top: 37px;
 		// padding-top: 37px;
 		// z-index: 100;
+
 	}
 
 	#map {
@@ -255,29 +421,30 @@
 
 	.pure-menu {
 		background:#eee;
-		border-bottom:1px #ddd solid;
 		position: fixed;
 		margin-top:0px;
 		width:100%;
 		margin-bottom:100px;
 		z-index: 100;
+		padding:5px 0px 0px 0px;
 	}
 
 	.pure-menu a, .pure-menu .pure-menu-heading  {
-		padding:0px 20px 5px 20px;
+		padding:0px 20px 10px 20px;
 	}
 
 	.zoom-ui {
 
 		position: absolute;
 		top:70px;
-		left:20px;
+		left:15px;
 		width:50px;
 		height:100px;
 		border-top:1px white solid;
 		border-bottom:1px #ccc solid;
 		text-align: center;
 		border-radius:4px;
+		z-index: 100;
 
 		p {
 			margin:0px;
@@ -304,11 +471,40 @@
 
 	}
 
+	.green-button {
+		background-color: #b7e42a;
+		border-bottom:1px #98bc0f solid;
+		width:70%;
+		position: relative;
+		font-size: 21px;
+		font-weight:600;
+		color:white;
+		text-shadow: 0 -1px 0 #98bc0f;
+		border-radius:4px;
+
+	}
+
+	.green-button-sm {
+		background-color: #b7e42a;
+		border-bottom:1px #98bc0f solid;
+		width:120px;
+		position: relative;
+		text-align: center;
+		font-size: 21px;
+		font-weight:600;
+		color:white;
+		text-shadow: 0 -1px 0 #98bc0f;
+		border-radius:4px;
+		margin:20px 10px 0px 10px;
+
+	}
+
+
 
 	#button-bar {
 
 		width:100%;
-		position: absolute;
+		position: fixed;
 		bottom:0px;
 		background:#eee;
 		background:rgba(230,230,230,.9);
@@ -383,14 +579,13 @@
 	*{margin:0;padding:0;}
 	
 	#overlay { 
-		height:80%;
-		width:80%;
+		width:85%;
 		margin:0 auto;
-		background:#fafafa;
+		background:#f5f5f5;
 		border-top:1px white solid;
 		border-bottom:1px #ddd solid;
 		color:black;
-		padding:10px;
+		padding:20px 0px;
 		position:absolute;
 		top:5%;
 		left:7.5%;
@@ -401,16 +596,144 @@
 		-moz-border-radius:10px;
 		-o-border-radius:10px;
 		border-radius:4px;
+		overflow: hidden;
 		
 		h2 {
 			font-size:18px;
+			text-shadow: 0 1px 0 rgba(255,255,255,.25);
 		}
 
 		p {
 			font-size:10px;
 		}
 
+		.arrow {
+			background:url(../img/arrow.png);
+			width: 20px;
+			height: 23px;
+			position: absolute;
+			float: right;
+			right:10px;
+			margin-top:-40px;
+			opacity: .3;
+		}
+		.location {
+			padding-left:20px;
+			width: 100%;
+			background: linear-gradient(to bottom, #f5f5f5 0%,#fafafa 100%);
+			border-top:1px #fff solid;
+			border-bottom:1px #eee solid;
+		}
+		.category {
+			text-align: center;
+			width: 100%;
+			background-color: #f5f5f5;
+			border-top:1px #fff solid;
+			border-bottom:1px #eee solid;
+			height:40px;
+
+			h2 {
+				padding:0px;
+				margin-top:7px;
+				color:white;
+				font-size: 21px;
+			}
+		}
+
+		.hungry {
+				background:#f5c912;
+				border-top:1px #ffe269 solid;
+				border-bottom:1px #d3ac0b solid;
+
+				h2{
+					text-shadow: 0 -1px 0 #d3ac0b;
+				}
+		}
+
+		.sober {
+			background:#badfce;
+			border-top:1px #c7f2dc solid;
+			border-bottom:1px #8ab7a0 solid;
+
+				h2{
+					text-shadow: 0 -1px 0 #8ab7a0;
+				}
+		}
+
+		.bored {
+			background:#ee5c20;
+			border-top:1px #f98258 solid;
+			border-bottom:1px #c63806 solid;
+
+				h2{
+					text-shadow: 0 -1px 0 #c63806;
+				}
+		}
+
+		.venue {
+			padding-left:20px;
+			width: 100%;
+			background: linear-gradient(to bottom, #f5f5f5 0%,#fafafa 100%);
+			border-top:1px #fff solid;
+			border-bottom:1px #eee solid;
+		}
+		.item {
+			padding-left:20px;
+			width: 100%;
+			background: linear-gradient(to bottom, #f5f5f5 0%,#fafafa 100%);
+			border-top:1px #fff solid;
+			border-bottom:1px #eee solid;
+		}
+		.do-button {
+			width:70%;
+			position: relative;
+			margin:20px auto 0 auto;
+			text-align: center;
+
+		}
+
 	}
+
+	#do-it { 
+		width:85%;
+		margin:0 auto;
+		background:url(../img/sunburst.png) #fafafa;
+		background-position: center;
+		border-top:1px white solid;
+		border-bottom:1px #ddd solid;
+		color:black;
+		padding:20px 0px;
+		position:absolute;
+		top:10%;
+		left:7.5%;
+		z-index:1000;
+		display:none;
+		/* CSS 3 */
+		-webkit-border-radius:10px;
+		-moz-border-radius:10px;
+		-o-border-radius:10px;
+		border-radius:4px;
+		overflow: hidden;
+		text-align: center;
+		margin-bottom:20px;
+
+		h2 {
+			padding:0px;
+			margin:0px 0px 10px 0px;
+		}
+
+		.do-it-content {
+			background:#f5f5f5;
+			width:70%;
+			margin:0 auto;
+			padding:20px;
+			position: relative;
+			box-shadow: 0 2px 4px rgba(0,0,0,.4);
+		}
+
+
+	}
+
 
 	#mask { 
 		position:fixed;
@@ -428,9 +751,14 @@
 		opacity:1;
 	}
 
+	#do-it:target, #do-it:target + #mask {
+		display:block;
+		opacity:1;
+	}
+
 	.close { 
 		position:absolute;
-		top:10px;
+		top:2px;
 		right:10px;
 		text-decoration:none;
 	}
