@@ -9,21 +9,27 @@
 		background:#eee;
 		border-bottom:1px #ddd solid;
 		position: absolute;
-		top:0px;
+		margin-top:0px;
 		width:100%;
 		margin-bottom:100px;
+
 	}
+
+	.pure-menu a, .pure-menu .pure-menu-heading  {
+			padding:0px 20px 5px 20px;
+		}
 
 	.zoom-ui {
 
 		position: absolute;
-		top:60px;
+		top:70px;
 		left:20px;
 		width:50px;
 		height:100px;
 		border-top:1px white solid;
 		border-bottom:1px #ccc solid;
 		text-align: center;
+		border-radius:4px;
 
 		p {
 			margin:0px;
@@ -38,12 +44,14 @@
 			width:50px;
 			height:50%;
 			background:#ddd;
+			border-radius:4px 4px 0px 0px;
 		}
 
 		.zoom-out {
 			width:50px;
 			height:50%;
 			background:#eee;
+			border-radius:0px 0px 4px 4px;
 		}
 
 	}
@@ -147,7 +155,7 @@
 	    -webkit-border-radius:10px;
 	    -moz-border-radius:10px;
 	    -o-border-radius:10px;
-	    border-radius:10px;
+	    border-radius:4px;
 	}
 
 	#mask { 
@@ -197,10 +205,14 @@
 		width:100%;
 	}
 
+	.pure-menu a, .pure-menu .pure-menu-heading  {
+			padding:0px 20px 5px 20px;
+		}
+
 	.zoom-ui {
 
 		position: absolute;
-		top:60px;
+		top:70px;
 		left:20px;
 		width:50px;
 		height:100px;
@@ -316,19 +328,30 @@
 	    height:80%;
 	    width:80%;
 	    margin:0 auto;
-	    background:white;
+	    background:#fafafa;
+	    border-top:1px white solid;
+	    border-bottom:1px #ddd solid;
 	    color:black;
 	    padding:10px;
 	    position:absolute;
 	    top:5%;
-	    left:10%;
+	    left:7.5%;
 	    z-index:1000;
 	    display:none;
 	    /* CSS 3 */
 	    -webkit-border-radius:10px;
 	    -moz-border-radius:10px;
 	    -o-border-radius:10px;
-	    border-radius:10px;
+	    border-radius:4px;
+		
+		h2 {
+			font-size:18px;
+		}
+
+		p {
+			font-size:10px;
+		}
+
 	}
 
 	#mask { 
@@ -356,8 +379,8 @@
 
 	.open-overlay { 
 	   position: absolute;
-	   top:400px;
-	   left:200px;
+	   top:200px;
+	   left:100px;
 	   color:#fff;
 	   text-decoration: none;
 	   text-shadow: 0 1px 0 rgba(0,0,0,.5);
