@@ -64,8 +64,8 @@ class Application(tornado.web.Application):
         # )
 
         # s3
-        # self.s3 = S3Connection(S3_ACCESS_KEY_ID, S3_SECRET_ACCESS_KEY)
-        # self.s3_bucket = self.s3.get_bucket(S3_BUCKET_NAME)
+        self.s3 = S3Connection(S3_ACCESS_KEY_ID, S3_SECRET_ACCESS_KEY)
+        self.s3_bucket = self.s3.get_bucket(S3_BUCKET_NAME)
 
         # redis
         # self.redisdb = redis.StrictRedis(host=REDIS_HOST, port=REDIS_PORT, db=REDIS_DB)
