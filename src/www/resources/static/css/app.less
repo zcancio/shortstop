@@ -60,6 +60,7 @@
 		border-radius:4px;
 		z-index: 100;
 		box-shadow: 0 2px 4px rgba(0,0,0,.25);
+		cursor: pointer;
 
 		p {
 			margin:0px;
@@ -221,6 +222,11 @@
 
 		h2 {
 			text-shadow: 0 1px 0 rgba(255,255,255,.25);
+			max-width: 80%;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			white-space: nowrap;
+
 		}
 
 
@@ -265,10 +271,12 @@
 			border-bottom:1px #eee solid;
 			height:40px;
 
-			h2 {
+			h2.cat {
 				padding:0px;
-				margin-top:6px;
+				margin:6px auto 0px auto;
 				color:white;
+				width:200px;
+
 			}
 
 		
@@ -625,6 +633,7 @@
 		border-radius:4px;
 		z-index: 100;
 		box-shadow: 0 2px 4px rgba(0,0,0,.25);
+		cursor:pointer;
 
 
 		p {
@@ -634,6 +643,7 @@
 			font-size:28px;
 			font-weight:600;
 			text-shadow: 0 1px 0 rgba(255,255,255,.4);
+			cursor:pointer;
 		}
 
 		.zoom-in {
@@ -641,6 +651,7 @@
 			height:50%;
 			background:#ddd;
 			border-radius:4px 4px 0px 0px;
+			cursor:pointer;
 		}
 
 		.zoom-out {
@@ -648,6 +659,7 @@
 			height:50%;
 			background:#eee;
 			border-radius:0px 0px 4px 4px;
+			cursor:pointer;
 		}
 
 	}
@@ -782,6 +794,10 @@
 		
 		h2 {
 			font-size:18px;
+			max-width: 80%;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			white-space: nowrap;
 			text-shadow: 0 1px 0 rgba(255,255,255,.25);
 		}
 
@@ -830,11 +846,13 @@
 			border-bottom:1px #eee solid;
 			height:40px;
 
-			h2 {
+			h2.cat {
 				padding:0px;
-				margin-top:7px;
+				margin:7px auto 0px auto;
 				color:white;
 				font-size: 21px;
+				width:200px;
+				text-align: center;
 			}
 		}
 
